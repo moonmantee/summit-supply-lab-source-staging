@@ -24,6 +24,6 @@ Another club member installed Proxmox, while I migrated the virtual machines. Ha
 
 ### Repository and Validation
 
-This repository is a curated snapshot prepared to document the project, not the original development Git history.
+This repository is a curated source snapshot prepared to document the project, not the original development Git history.
 
-The snapshot includes source code and configuration examples, but a complete nine-VM rebuild and full-duration rehearsal from this snapshot have not yet been validated. Additional testing limitations are documented separately.
+The deployed environment has undergone a rehearsal. However, a complete rebuild of all nine VMs from this curated source snapshot has not been independently validated. Additional validation details are documented separately.
