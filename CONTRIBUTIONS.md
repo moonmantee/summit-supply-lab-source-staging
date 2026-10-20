@@ -1,9 +1,29 @@
-# Contributions and assistance — working statement
+# Contributions and Assistance
 
-The project is an integrated cyber defense practice environment built around the fictional Summit Supply organization.
+Summit Supply is a nine-VM cyber defense practice environment designed for students to secure and maintain the services of a fictional company.
 
-I selected the lab architecture, service roles and dependencies, network segmentation, functional scoring goals, and exercise progression. The applicant personally configured the initial VMs, network and services, directed revisions, and tested selected failure/recovery behaviors. The custom software includes substantial AI-assisted implementation. Online references and AI assistance also supported configuration and some complex commands.
+### My Contributions
 
-CALDERA, Aeacus/Phocus, phpBB, MailEnable, Proxmox, pfSense and other upstream products remain the work of their respective authors. Another club member installed Proxmox; the applicant migrated the lab VMs. Hardware reuse and the RAM upgrade were club efforts.
+I developed the overall concept and selected the lab architecture, virtual machine roles, service dependencies, network segmentation, scoring objectives, and exercise progression.
 
-This is a draft based on the portfolio preparation records. Review individual components and collaborators before publication. Do not claim sole authorship of generated or upstream code. A newly prepared source repository must not be presented as the original development Git history.
+I configured the initial virtual machines, networking, and services; migrated the lab VMs to a Proxmox server; directed iterative revisions; and tested selected service-failure and recovery scenarios.
+
+My primary contributions were the system design, technical requirements, infrastructure configuration, integration of components, and hands-on validation.
+
+### AI Assistance
+
+Substantial portions of the custom software were implemented with AI coding assistance. I used AI tools to assist with code implementation, configuration, troubleshooting, and complex commands, alongside online technical documentation.
+
+I do not claim sole authorship of AI-generated code. My contributions should be distinguished from the implementation assistance provided by these tools.
+
+### Collaborators and Third-Party Software
+
+The environment integrates existing technologies, including CALDERA, Aeacus/Phocus, phpBB, MailEnable, Proxmox, and pfSense. These projects remain the work of their respective developers.
+
+Another club member installed Proxmox, while I migrated the virtual machines. Hardware reuse and the RAM upgrade were collaborative club efforts.
+
+### Repository and Validation
+
+This repository is a curated snapshot prepared to document the project, not the original development Git history.
+
+The snapshot includes source code and configuration examples, but a complete nine-VM rebuild and full-duration rehearsal from this snapshot have not yet been validated. Additional testing limitations are documented separately.
