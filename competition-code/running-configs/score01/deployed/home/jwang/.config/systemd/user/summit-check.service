@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Summit CCDC availability and SLA scoring round
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/jwang/summit-scoring/scorer.py
+TimeoutStartSec=60
+UMask=0077
+NoNewPrivileges=true

@@ -1,0 +1,14 @@
+[Unit]
+Description=Local browser access to public Summit practice reports
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -m http.server 8765 --bind 127.0.0.1 --directory /opt/aeacus/assets
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=default.target

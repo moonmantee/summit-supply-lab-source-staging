@@ -1,0 +1,17 @@
+{
+    "machine":  "MAIL01",
+    "exportRoot":  "C:\\ProgramData\\SummitLab\\MailOrganizerExport-9ada9aaa3a3c49cfbaa446408fa092f3",
+    "archive":  "C:\\ProgramData\\SummitLab\\MailOrganizerExport-9ada9aaa3a3c49cfbaa446408fa092f3\\organizer-records.zip",
+    "sha256":  "1673F7276FE459304C079927D0CD93FBAB86F8CBADFFD89E6437F5F345976DBC",
+    "sourceRoots":  [
+                        "C:\\ProgramData\\SummitLab\\MailCompetition-555018db66ec49fc888342aef49c224d",
+                        "C:\\ProgramData\\SummitLab\\MailBuild-20261004",
+                        "C:\\ProgramData\\SummitLab\\MailCompetition-d1804031f863415093e5ef70fb1b3b4f",
+                        "C:\\ProgramData\\SummitLab\\MailCompetition-e6fa7807bc714eaab3ba8ebd964714d3",
+                        "C:\\ProgramData\\SummitLab\\MailRuntimePreflight-3cf54f3b7dda4ccbb0ddd686ccbfbd33",
+                        "C:\\ProgramData\\SummitLab\\MailScorerRecovery-37c69257bc3544b69742a5e52a37ef0a",
+                        "C:\\ProgramData\\SummitLab\\MailScorerRecovery-75af28235b46400e8576d1e0d4f904a0",
+                        "C:\\ProgramData\\SummitLab\\MailScorerRecovery-f56f229a97e4449a8d80cbba79a3b94e"
+                    ],
+    "utc":  "2026-10-05T00:05:17.4941803Z"
+}

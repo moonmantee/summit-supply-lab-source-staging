@@ -1,0 +1,9 @@
+[Unit]
+Description=Fresh read-only Summit scoring receipt
+[Timer]
+OnBootSec=1s
+OnUnitActiveSec=1s
+AccuracySec=250ms
+Unit=summit-caldera-scoring-export.service
+[Install]
+WantedBy=timers.target

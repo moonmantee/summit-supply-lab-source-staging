@@ -1,0 +1,417 @@
+{
+  "backup": "/var/backups/summit-shop01-all-9o8_p6lb",
+  "repaired": {
+    "checks": [
+      {
+        "id": 1,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 2,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 3,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 4,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 5,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 6,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 7,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 8,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 9,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 10,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 11,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 12,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 13,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 14,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 15,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 16,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 17,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 18,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 19,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 20,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 21,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 22,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 23,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 24,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 25,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 26,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 27,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 28,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 29,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 30,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 31,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 32,
+        "points": 4,
+        "status": "PASS"
+      },
+      {
+        "id": 33,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 34,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 35,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 36,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 37,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 38,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 39,
+        "points": 2,
+        "status": "PASS"
+      },
+      {
+        "id": 40,
+        "points": 2,
+        "status": "PASS"
+      }
+    ],
+    "expected_points": 100,
+    "total_points": 100,
+    "count": 40
+  },
+  "restored": {
+    "checks": [
+      {
+        "id": 1,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 2,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 3,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 4,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 5,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 6,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 7,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 8,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 9,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 10,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 11,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 12,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 13,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 14,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 15,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 16,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 17,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 18,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 19,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 20,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 21,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 22,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 23,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 24,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 25,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 26,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 27,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 28,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 29,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 30,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 31,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 32,
+        "points": 4,
+        "status": "FAIL"
+      },
+      {
+        "id": 33,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 34,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 35,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 36,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 37,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 38,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 39,
+        "points": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": 40,
+        "points": 2,
+        "status": "FAIL"
+      }
+    ],
+    "expected_points": 0,
+    "total_points": 100,
+    "count": 40
+  }
+}

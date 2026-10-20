@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Summit CCDC service scoring every two minutes
+
+[Timer]
+OnStartupSec=10
+OnUnitActiveSec=120
+AccuracySec=1
+Unit=summit-check.service
+
+[Install]
+WantedBy=timers.target

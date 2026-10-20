@@ -1,0 +1,27 @@
+[Unit]
+Description=Summit CALDERA benign pilot contact (mutual TLS)
+After=network-online.target summit-caldera.service
+Wants=network-online.target
+[Service]
+Type=simple
+User=summit-contact
+Group=summit-contact
+ExecStart=/usr/bin/python3 /opt/summit-caldera-contact/contact_gateway.py --config /etc/summit-caldera-contact/runtime/config.json
+Restart=no
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+CapabilityBoundingSet=
+UMask=0077
+MemoryMax=128M
+CPUQuota=25%
+TasksMax=40
+[Install]
+WantedBy=multi-user.target

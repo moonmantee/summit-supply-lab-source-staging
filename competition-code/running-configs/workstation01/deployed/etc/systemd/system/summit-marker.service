@@ -1,0 +1,11 @@
+[Unit]
+Description=SUMMIT-TRAINING-SYSTEMD-MARKER
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/summit-training/systemd-marker.sh
+User=summit-marker-runner
+Group=summit-marker-runner
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes

@@ -1,0 +1,56 @@
+[
+  {
+    "code": "I01",
+    "title": "Publish the orders DNS record",
+    "hosts": "dc01, shop01",
+    "points": 10,
+    "description": "Create orders.corp.summit.test as an A record pointing to shop01 at 10.77.30.10. Preserve the existing company DNS records and directory services.",
+    "acceptance": "Automatic service: exact orders.corp.summit.test A record equals 10.77.30.10 over UDP and TCP to dc01. Three consecutive passing scoring rounds before the deadline award completion points. The DNS service then continues availability scoring.",
+    "automatic": true
+  },
+  {
+    "code": "I02",
+    "title": "Publish inventory through read-only FTP",
+    "hosts": "forum01",
+    "points": 10,
+    "description": "Using the inventory.csv and account details supplied with this card, create a dedicated read-only FTP directory and account. Preserve the existing baseline FTP site and its ftp_reader access. This new account must not replace ftp_reader. Download the inventory and dedicated account details attached to this task.",
+    "acceptance": "Automatic service: inventory_reader retrieves the supplied inventory.csv with its exact SHA256 through passive FTP; upload of a disposable new file is denied; anonymous inventory retrieval is denied. Three consecutive passing rounds before the deadline award completion points. This is a new service in addition to baseline FTP. Preserve existing data and configure all inventory access as read-only; overwrite/delete restrictions remain operational policy and are not tested by destructive file operations.",
+    "automatic": true
+  },
+  {
+    "code": "I03",
+    "title": "Add the dispatch mailbox alias",
+    "hosts": "mail01",
+    "points": 15,
+    "description": "Create dispatch@corp.summit.test as an alias for the operations mailbox supplied with this card. Preserve mail delivery, authenticated submission, and mailbox access. White Team must supply mailbox details and approved TLS connection instructions before release.",
+    "acceptance": "Automatic service: authenticated STARTTLS SMTP submission on 587 to dispatch@corp.summit.test delivers a fresh uniquely tagged message to the operations mailbox, searchable through trusted IMAPS on 993 within eight seconds. Three consecutive passing rounds before the deadline award completion points. White Team must configure the mailbox credentials, lab DNS name and trusted certificate file before release.",
+    "automatic": true
+  },
+  {
+    "code": "I04",
+    "title": "Upgrade the partner forum to HTTPS",
+    "hosts": "forum01, sql01",
+    "points": 15,
+    "description": "Enable HTTPS for forum01.corp.summit.test using the supplied lab certificate and installation instructions. Redirect HTTP to the HTTPS origin. Preserve forum content, authentication, posting, and database access. Download the attached lab-only PEM certificate package and installation instructions.",
+    "acceptance": "Automatic service: trusted certificate chain, DNS name and validity for forum01.corp.summit.test on 443; HTTP / redirects to https://forum01.corp.summit.test/; HTTPS / returns HTTP 200 containing the configured forum marker. Three consecutive passing rounds before the deadline award completion points. HTTPS becomes a separate scored service. Preserve the functional forum and database; login/posting workflows remain operational policy and are not claimed by this availability probe.",
+    "automatic": true
+  },
+  {
+    "code": "I05",
+    "title": "Publish the customer shipping policy",
+    "hosts": "shop01",
+    "points": 25,
+    "description": "Publish the attached shipping-policy.txt unchanged at https://10.77.30.10/shipping-policy.txt using shop01's existing trusted HTTPS service. Keep the storefront and catalog working. Serve the file directly with HTTP 200; do not redirect it or require login. Preserve the exact UTF-8 bytes, including the final newline.",
+    "acceptance": "A new HTTPS shipping-policy service checks certificate trust and the 10.77.30.10 identity, HTTP 200 at /shipping-policy.txt on port 443, and exact SHA256 equality to the supplied file. Three consecutive passing rounds completed before the deadline award 25 completion points. The resource then continues availability scoring at 3 points per PASS, with a 10-point SLA deduction per five consecutive DOWN rounds. The existing storefront check remains active.",
+    "automatic": true
+  },
+  {
+    "code": "I06",
+    "title": "Deploy the warehouse status endpoint",
+    "hosts": "workstation01",
+    "points": 25,
+    "description": "Deploy a persistent internal HTTP service on workstation01 at http://10.77.20.10:8080/health.json. Serve the attached health.json unchanged with HTTP 200 and no authentication or redirect. Configure the guest firewall so score01 (10.77.70.10) can reach it while preserving existing access controls and SSH. White Team provides the range firewall scoring path. Preserve the exact UTF-8 bytes, including the final newline, and keep the service running throughout the event.",
+    "acceptance": "A new warehouse HTTP service retrieves /health.json from workstation01 on TCP 8080 and verifies HTTP 200 and the exact SHA256 of the supplied file. Three consecutive passing rounds completed before the deadline award 25 completion points. The endpoint then continues availability scoring at 3 points per PASS, with a 10-point SLA deduction per five consecutive DOWN rounds. Persistence across reboot is an operational requirement; the automatic check grades current reachability and exact content.",
+    "automatic": true
+  }
+]

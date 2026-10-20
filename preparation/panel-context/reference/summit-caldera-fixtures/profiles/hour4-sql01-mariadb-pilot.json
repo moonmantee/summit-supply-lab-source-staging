@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hour4-pilot-sql01-mariadb",
+    "guest": "sql01",
+    "target": "mariadb",
+    "action": "business_binary_rename",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

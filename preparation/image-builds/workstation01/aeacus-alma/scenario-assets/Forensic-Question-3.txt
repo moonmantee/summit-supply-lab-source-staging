@@ -1,0 +1,10 @@
+Forensic Question 3 — Payload fingerprint
+
+The preserved synthetic payload is:
+  /opt/summit-evidence/systemd-marker.sh
+
+What is the SHA-256 hash of this preserved file?
+Enter only its 64-character lowercase hexadecimal hash after the equals sign.
+Save your answer in this file. Preserve the evidence file.
+
+Answer =

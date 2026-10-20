@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mail-imap-restart-off",
+    "guest": "mail01",
+    "action": "business_restart_off",
+    "target": "imap",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

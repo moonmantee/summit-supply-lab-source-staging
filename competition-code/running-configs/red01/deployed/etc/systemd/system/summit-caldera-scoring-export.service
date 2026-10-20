@@ -1,0 +1,18 @@
+[Unit]
+Description=Read-only Summit scoring state export for fixture authorization
+StartLimitIntervalSec=0
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/summit-caldera-fixtures/scoring_export.py
+RuntimeDirectory=summit-caldera-scoring
+RuntimeDirectoryMode=0755
+RuntimeDirectoryPreserve=yes
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/run/summit-caldera-scoring
+NoNewPrivileges=yes
+PrivateTmp=yes
+MemoryMax=48M
+TasksMax=8
+TimeoutStartSec=5

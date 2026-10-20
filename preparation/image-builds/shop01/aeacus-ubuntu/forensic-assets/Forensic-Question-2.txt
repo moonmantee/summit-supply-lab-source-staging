@@ -1,0 +1,10 @@
+Shop01 - Forensic Question 2 (2 points)
+
+Use the preserved SYNTHETIC evidence in /opt/summit-evidence/shop01.
+Which backup URL path was successfully retrieved by the unexpected client?
+Submit the full path beginning with /, with no hostname or quotation marks.
+
+Write your answer after the equals sign below, then save this file.
+Keep exactly one Answer = line. Each question is scored independently.
+
+Answer =

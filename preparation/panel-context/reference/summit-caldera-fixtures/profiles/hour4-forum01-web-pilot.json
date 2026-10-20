@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hour4-pilot-forum01-web",
+    "guest": "forum01",
+    "target": "web",
+    "action": "business_launch_fault",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mail-smtp-disable",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "smtp",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

@@ -1,0 +1,1323 @@
+{
+    "machine":  "MAIL01",
+    "snapshot":  "MAIL01-before-competition-20261004",
+    "issueCount":  28,
+    "points":  100,
+    "expectedStart":  0,
+    "expectedSolution":  100,
+    "fallbackSid":  "S-1-5-21-4002471664-629187688-1727004601-1011",
+    "auditSid":  "S-1-5-21-4002471664-629187688-1727004601-1012",
+    "contractorSid":  "S-1-5-21-4002471664-629187688-1727004601-1013",
+    "credentialHash":  "75410FDBC1858A8ED7A3179E15A3D4B2E67C87C1F684723F5DB611944DF12875",
+    "archiveHash":  "6FA73BD75CEA6963E16182FF6EE15F8FBEE8B94227CEB90FD5171F95F61B3C8F",
+    "issueManifest":  [
+                          {
+                              "id":  "U01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "User Auditing",
+                              "points":  3,
+                              "policy":  "Only Administrator, labadmin, mail.fallback, mail.audit, the existing domain administration group and existing MailEnable service identities are authorized. Disable undocumented interactive identities.",
+                              "probe":  "Probe.ps1 -Check U01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Only Administrator, labadmin, mail.fallback, mail.audit, the existing domain administration group and existing MailEnable service identities are authorized. Disable undocumented interactive identities.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MAIL01\\mail.contractor",
+                              "evidence":  [
+                                               {
+                                                   "id":  "U01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:56:57.5013255Z"
+                                               },
+                                               {
+                                                   "id":  "U01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:56:57.5171716Z"
+                                               },
+                                               {
+                                                   "id":  "U01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:56:57.5641639Z"
+                                               },
+                                               {
+                                                   "id":  "U01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:56:57.5795038Z"
+                                               }
+                                           ],
+                              "planted_state":  "Synthetic interactive account enabled"
+                          },
+                          {
+                              "id":  "U02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "User Auditing",
+                              "points":  3,
+                              "policy":  "mail.audit is an authorized standard employee. It must remain enabled without local administrator privileges.",
+                              "probe":  "Probe.ps1 -Check U02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "mail.audit is an authorized standard employee. It must remain enabled without local administrator privileges.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MAIL01\\mail.audit administrative membership",
+                              "evidence":  [
+                                               {
+                                                   "id":  "U02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:56:58.4862385Z"
+                                               },
+                                               {
+                                                   "id":  "U02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:56:58.5014753Z"
+                                               },
+                                               {
+                                                   "id":  "U02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:56:58.5173395Z"
+                                               },
+                                               {
+                                                   "id":  "U02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:56:58.5328068Z"
+                                               }
+                                           ],
+                              "planted_state":  "Synthetic employee granted local administrator"
+                          },
+                          {
+                              "id":  "S01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "SSH must reject empty passwords. Preserve organizer keys and password-capable authorized access.",
+                              "probe":  "Probe.ps1 -Check S01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "SSH must reject empty passwords. Preserve organizer keys and password-capable authorized access.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SSH PermitEmptyPasswords",
+                              "evidence":  [
+                                               {
+                                                   "id":  "S01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:56:59.6108949Z"
+                                               },
+                                               {
+                                                   "id":  "S01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:00.4236086Z"
+                                               },
+                                               {
+                                                   "id":  "S01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:01.2202731Z"
+                                               },
+                                               {
+                                                   "id":  "S01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:02.0014050Z"
+                                               }
+                                           ],
+                              "planted_state":  "yes; no usable blank-password account created"
+                          },
+                          {
+                              "id":  "S02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "SSH forwarding of TCP, agent and streamlocal connections is prohibited on MAIL01.",
+                              "probe":  "Probe.ps1 -Check S02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "SSH forwarding of TCP, agent and streamlocal connections is prohibited on MAIL01.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SSH forwarding",
+                              "evidence":  [
+                                               {
+                                                   "id":  "S02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:02.9861770Z"
+                                               },
+                                               {
+                                                   "id":  "S02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:03.8456047Z"
+                                               },
+                                               {
+                                                   "id":  "S02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:04.7361793Z"
+                                               },
+                                               {
+                                                   "id":  "S02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:05.6113140Z"
+                                               }
+                                           ],
+                              "planted_state":  "DisableForwarding no, forwarding otherwise allowed"
+                          },
+                          {
+                              "id":  "S03",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "SSH LoginGraceTime must be between 1 and 60 seconds.",
+                              "probe":  "Probe.ps1 -Check S03",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "SSH LoginGraceTime must be between 1 and 60 seconds.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SSH LoginGraceTime",
+                              "evidence":  [
+                                               {
+                                                   "id":  "S03",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:06.6423036Z"
+                                               },
+                                               {
+                                                   "id":  "S03",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:07.4549460Z"
+                                               },
+                                               {
+                                                   "id":  "S03",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:08.3609963Z"
+                                               },
+                                               {
+                                                   "id":  "S03",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:09.2517563Z"
+                                               }
+                                           ],
+                              "planted_state":  "600 seconds"
+                          },
+                          {
+                              "id":  "W01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "Disable IIS directory browsing for MailEnable WebMail.",
+                              "probe":  "Probe.ps1 -Check W01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Disable IIS directory browsing for MailEnable WebMail.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MailEnable WebMail directoryBrowse",
+                              "evidence":  [
+                                               {
+                                                   "id":  "W01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:10.4238507Z"
+                                               },
+                                               {
+                                                   "id":  "W01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:11.5175071Z"
+                                               },
+                                               {
+                                                   "id":  "W01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:12.6268459Z"
+                                               },
+                                               {
+                                                   "id":  "W01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:13.6737262Z"
+                                               }
+                                           ],
+                              "planted_state":  "enabled"
+                          },
+                          {
+                              "id":  "W02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "Remote webmail clients must receive Custom or DetailedLocalOnly IIS errors.",
+                              "probe":  "Probe.ps1 -Check W02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Remote webmail clients must receive Custom or DetailedLocalOnly IIS errors.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MailEnable WebMail httpErrors",
+                              "evidence":  [
+                                               {
+                                                   "id":  "W02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:20.1582111Z"
+                                               },
+                                               {
+                                                   "id":  "W02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:21.2207605Z"
+                                               },
+                                               {
+                                                   "id":  "W02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:22.2834713Z"
+                                               },
+                                               {
+                                                   "id":  "W02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:23.3146879Z"
+                                               }
+                                           ],
+                              "planted_state":  "Detailed remote errors"
+                          },
+                          {
+                              "id":  "W03",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "HTTP TRACE requests must be denied by effective IIS request filtering.",
+                              "probe":  "Probe.ps1 -Check W03",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "HTTP TRACE requests must be denied by effective IIS request filtering.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MailEnable WebMail TRACE request filtering",
+                              "evidence":  [
+                                               {
+                                                   "id":  "W03",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:25.9713946Z"
+                                               },
+                                               {
+                                                   "id":  "W03",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:28.0491592Z"
+                                               },
+                                               {
+                                                   "id":  "W03",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:30.1430497Z"
+                                               },
+                                               {
+                                                   "id":  "W03",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:32.2211697Z"
+                                               }
+                                           ],
+                              "planted_state":  "TRACE explicitly allowed"
+                          },
+                          {
+                              "id":  "W04",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  3,
+                              "policy":  "Webmail maxAllowedContentLength must be between 30000000 and 50000000 bytes; ordinary mail attachments must remain usable.",
+                              "probe":  "Probe.ps1 -Check W04",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Webmail maxAllowedContentLength must be between 30000000 and 50000000 bytes; ordinary mail attachments must remain usable.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "MailEnable WebMail request-size limit",
+                              "evidence":  [
+                                               {
+                                                   "id":  "W04",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:33.7836003Z"
+                                               },
+                                               {
+                                                   "id":  "W04",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:34.8774600Z"
+                                               },
+                                               {
+                                                   "id":  "W04",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:35.9088112Z"
+                                               },
+                                               {
+                                                   "id":  "W04",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:36.9398261Z"
+                                               }
+                                           ],
+                              "planted_state":  "2147483647 bytes"
+                          },
+                          {
+                              "id":  "L01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  3,
+                              "policy":  "Enable successful process creation auditing.",
+                              "probe":  "Probe.ps1 -Check L01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Enable successful process creation auditing.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Process Creation auditing",
+                              "evidence":  [
+                                               {
+                                                   "id":  "L01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:37.3775496Z"
+                                               },
+                                               {
+                                                   "id":  "L01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:38.0959646Z"
+                                               },
+                                               {
+                                                   "id":  "L01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:38.1274646Z"
+                                               },
+                                               {
+                                                   "id":  "L01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:38.1740676Z"
+                                               }
+                                           ],
+                              "planted_state":  "Success disabled"
+                          },
+                          {
+                              "id":  "L02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  3,
+                              "policy":  "Enable successful local user account management auditing.",
+                              "probe":  "Probe.ps1 -Check L02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Enable successful local user account management auditing.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "User Account Management auditing",
+                              "evidence":  [
+                                               {
+                                                   "id":  "L02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:38.3145921Z"
+                                               },
+                                               {
+                                                   "id":  "L02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:39.4552790Z"
+                                               },
+                                               {
+                                                   "id":  "L02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:39.4869244Z"
+                                               },
+                                               {
+                                                   "id":  "L02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:39.5179430Z"
+                                               }
+                                           ],
+                              "planted_state":  "Success disabled"
+                          },
+                          {
+                              "id":  "L03",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  3,
+                              "policy":  "Enable failed logon auditing.",
+                              "probe":  "Probe.ps1 -Check L03",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Enable failed logon auditing.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Failed Logon auditing",
+                              "evidence":  [
+                                               {
+                                                   "id":  "L03",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:39.6429211Z"
+                                               },
+                                               {
+                                                   "id":  "L03",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:40.7212502Z"
+                                               },
+                                               {
+                                                   "id":  "L03",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:40.7526290Z"
+                                               },
+                                               {
+                                                   "id":  "L03",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:40.7834338Z"
+                                               }
+                                           ],
+                              "planted_state":  "Failure disabled"
+                          },
+                          {
+                              "id":  "P01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  4,
+                              "policy":  "Configure a nonempty interactive logon caption and notice.",
+                              "probe":  "Probe.ps1 -Check P01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Configure a nonempty interactive logon caption and notice.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Interactive logon notice",
+                              "evidence":  [
+                                               {
+                                                   "id":  "P01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:40.8775256Z"
+                                               },
+                                               {
+                                                   "id":  "P01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:40.8930203Z"
+                                               },
+                                               {
+                                                   "id":  "P01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:40.9085548Z"
+                                               },
+                                               {
+                                                   "id":  "P01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:40.9241699Z"
+                                               }
+                                           ],
+                              "planted_state":  "Caption and text blank"
+                          },
+                          {
+                              "id":  "P02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  4,
+                              "policy":  "Machine inactivity limit must be 60 through 900 seconds.",
+                              "probe":  "Probe.ps1 -Check P02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Machine inactivity limit must be 60 through 900 seconds.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Machine inactivity limit",
+                              "evidence":  [
+                                               {
+                                                   "id":  "P02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.0021518Z"
+                                               },
+                                               {
+                                                   "id":  "P02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.0179199Z"
+                                               },
+                                               {
+                                                   "id":  "P02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.0337993Z"
+                                               },
+                                               {
+                                                   "id":  "P02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.0337993Z"
+                                               }
+                                           ],
+                              "planted_state":  "0 seconds"
+                          },
+                          {
+                              "id":  "P03",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Local Policy",
+                              "points":  4,
+                              "policy":  "Do not allow anonymous enumeration of SAM accounts.",
+                              "probe":  "Probe.ps1 -Check P03",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Do not allow anonymous enumeration of SAM accounts.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Anonymous SAM enumeration",
+                              "evidence":  [
+                                               {
+                                                   "id":  "P03",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.1272406Z"
+                                               },
+                                               {
+                                                   "id":  "P03",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.1272406Z"
+                                               },
+                                               {
+                                                   "id":  "P03",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.1429541Z"
+                                               },
+                                               {
+                                                   "id":  "P03",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.1429541Z"
+                                               }
+                                           ],
+                              "planted_state":  "RestrictAnonymousSAM 0"
+                          },
+                          {
+                              "id":  "A01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  4,
+                              "policy":  "Ordinary users may read operations.ps1 in the scenario directory but must not modify it.",
+                              "probe":  "Probe.ps1 -Check A01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Ordinary users may read operations.ps1 in the scenario directory but must not modify it.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SummitMailScenario\\operations.ps1",
+                              "evidence":  [
+                                               {
+                                                   "id":  "A01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.2678539Z"
+                                               },
+                                               {
+                                                   "id":  "A01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.2678539Z"
+                                               },
+                                               {
+                                                   "id":  "A01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.2832555Z"
+                                               },
+                                               {
+                                                   "id":  "A01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.3302989Z"
+                                               }
+                                           ],
+                              "planted_state":  "Ordinary users full control"
+                          },
+                          {
+                              "id":  "A02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  4,
+                              "policy":  "Ordinary users may read the scenario Maintenance directory but must not create or modify executable content there.",
+                              "probe":  "Probe.ps1 -Check A02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Ordinary users may read the scenario Maintenance directory but must not create or modify executable content there.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SummitMailScenario\\Maintenance",
+                              "evidence":  [
+                                               {
+                                                   "id":  "A02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.4083206Z"
+                                               },
+                                               {
+                                                   "id":  "A02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.4558148Z"
+                                               },
+                                               {
+                                                   "id":  "A02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.4868165Z"
+                                               },
+                                               {
+                                                   "id":  "A02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.5021124Z"
+                                               }
+                                           ],
+                              "planted_state":  "Ordinary users may create executables"
+                          },
+                          {
+                              "id":  "A03",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  4,
+                              "policy":  "Only local Administrators and SYSTEM may read scenario confidential.txt. Preserve its contents.",
+                              "probe":  "Probe.ps1 -Check A03",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Only local Administrators and SYSTEM may read scenario confidential.txt. Preserve its contents.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SummitMailScenario\\confidential.txt",
+                              "evidence":  [
+                                               {
+                                                   "id":  "A03",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.5963731Z"
+                                               },
+                                               {
+                                                   "id":  "A03",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.5963731Z"
+                                               },
+                                               {
+                                                   "id":  "A03",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.6429915Z"
+                                               },
+                                               {
+                                                   "id":  "A03",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.6586997Z"
+                                               }
+                                           ],
+                              "planted_state":  "Ordinary users may read confidential fixture"
+                          },
+                          {
+                              "id":  "A04",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Application Security",
+                              "points":  4,
+                              "policy":  "Ordinary users may read the scenario test_authorized_keys fixture but must not modify it. It is inert and is not an organizer access key.",
+                              "probe":  "Probe.ps1 -Check A04",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Ordinary users may read the scenario test_authorized_keys fixture but must not modify it. It is inert and is not an organizer access key.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SummitMailScenario\\test_authorized_keys",
+                              "evidence":  [
+                                               {
+                                                   "id":  "A04",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.7365282Z"
+                                               },
+                                               {
+                                                   "id":  "A04",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.7526544Z"
+                                               },
+                                               {
+                                                   "id":  "A04",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:41.7679288Z"
+                                               },
+                                               {
+                                                   "id":  "A04",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:41.7838158Z"
+                                               }
+                                           ],
+                              "planted_state":  "Ordinary users may modify inert key fixture"
+                          },
+                          {
+                              "id":  "M01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Malware",
+                              "points":  4,
+                              "policy":  "The inert MailboxCacheSync scheduled task is unauthorized. Disable or remove its activation. Preserve ordinary MailEnable jobs.",
+                              "probe":  "Probe.ps1 -Check M01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "The inert MailboxCacheSync scheduled task is unauthorized. Disable or remove its activation. Preserve ordinary MailEnable jobs.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "\\SummitMailScenario\\MailboxCacheSync",
+                              "evidence":  [
+                                               {
+                                                   "id":  "M01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:42.4867557Z"
+                                               },
+                                               {
+                                                   "id":  "M01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:43.1119353Z"
+                                               },
+                                               {
+                                                   "id":  "M01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:43.6587311Z"
+                                               },
+                                               {
+                                                   "id":  "M01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:44.2058229Z"
+                                               }
+                                           ],
+                              "planted_state":  "Inert LocalService scheduled activation enabled"
+                          },
+                          {
+                              "id":  "M02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Malware",
+                              "points":  4,
+                              "policy":  "The inert SummitMailLegacy machine startup entry is unauthorized. Remove its activation.",
+                              "probe":  "Probe.ps1 -Check M02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "The inert SummitMailLegacy machine startup entry is unauthorized. Remove its activation.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "HKLM Run\\SummitMailLegacy",
+                              "evidence":  [
+                                               {
+                                                   "id":  "M02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:44.2995521Z"
+                                               },
+                                               {
+                                                   "id":  "M02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:44.2995521Z"
+                                               },
+                                               {
+                                                   "id":  "M02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:44.3149629Z"
+                                               },
+                                               {
+                                                   "id":  "M02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:44.3149629Z"
+                                               }
+                                           ],
+                              "planted_state":  "Inert startup activation present"
+                          },
+                          {
+                              "id":  "D01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Defensive Countermeasures",
+                              "points":  4,
+                              "policy":  "The SummitMail-UnnecessaryIngress allow rule is unauthorized. Disable or remove it. Keep all three firewall profiles enabled and retain required business rules.",
+                              "probe":  "Probe.ps1 -Check D01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "The SummitMail-UnnecessaryIngress allow rule is unauthorized. Disable or remove it. Keep all three firewall profiles enabled and retain required business rules.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "SummitMail-UnnecessaryIngress",
+                              "evidence":  [
+                                               {
+                                                   "id":  "D01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:45.2214055Z"
+                                               },
+                                               {
+                                                   "id":  "D01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:45.5961709Z"
+                                               },
+                                               {
+                                                   "id":  "D01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.0027540Z"
+                                               },
+                                               {
+                                                   "id":  "D01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.3931546Z"
+                                               }
+                                           ],
+                              "planted_state":  "Unnecessary TCP 9999 ingress allowed"
+                          },
+                          {
+                              "id":  "O01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Operating System Updates",
+                              "points":  4,
+                              "policy":  "Automatic Windows updates must not be disabled by policy; the Windows Update service must remain installed and must not have Disabled startup. Applying an actual update is separate acceptance work.",
+                              "probe":  "Probe.ps1 -Check O01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Automatic Windows updates must not be disabled by policy; the Windows Update service must remain installed and must not have Disabled startup. Applying an actual update is separate acceptance work.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Windows Update NoAutoUpdate",
+                              "evidence":  [
+                                               {
+                                                   "id":  "O01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.4869721Z"
+                                               },
+                                               {
+                                                   "id":  "O01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.4869721Z"
+                                               },
+                                               {
+                                                   "id":  "O01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.5028066Z"
+                                               },
+                                               {
+                                                   "id":  "O01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.5181722Z"
+                                               }
+                                           ],
+                              "planted_state":  "NoAutoUpdate 1"
+                          },
+                          {
+                              "id":  "F01",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Prohibited Files",
+                              "points":  4,
+                              "policy":  "Remove fictional plaintext training credentials from Operations, including renamed copies. Preserve operations-business.txt.",
+                              "probe":  "Probe.ps1 -Check F01",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Remove fictional plaintext training credentials from Operations, including renamed copies. Preserve operations-business.txt.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Operations fictional credentials",
+                              "evidence":  [
+                                               {
+                                                   "id":  "F01",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.6116959Z"
+                                               },
+                                               {
+                                                   "id":  "F01",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.6272142Z"
+                                               },
+                                               {
+                                                   "id":  "F01",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.6272142Z"
+                                               },
+                                               {
+                                                   "id":  "F01",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.6430975Z"
+                                               }
+                                           ],
+                              "planted_state":  "Identified fictional content present in Operations"
+                          },
+                          {
+                              "id":  "F02",
+                              "recovery":  "Scoped original state or exact build-owned resource",
+                              "category":  "Prohibited Files",
+                              "points":  4,
+                              "policy":  "Remove the synthetic personal media archive from Operations, including renamed copies. Preserve business files.",
+                              "probe":  "Probe.ps1 -Check F02",
+                              "preservation":  "MailEnable business services/data, domain trust, organizer/fallback",
+                              "evidenceConfigHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+                              "repair":  "Remove the synthetic personal media archive from Operations, including renamed copies. Preserve business files.",
+                              "dependencies":  [
+                                                   "Windows PowerShell 5.1",
+                                                   "Required native target component and preserved business fixture",
+                                                   "C:\\aeacus\\probes\\Probe.ps1"
+                                               ],
+                              "evidenceProbeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+                              "status":  "runtime-verified",
+                              "target":  "Operations synthetic media archive",
+                              "evidence":  [
+                                               {
+                                                   "id":  "F02",
+                                                   "state":  "protected",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.7210847Z"
+                                               },
+                                               {
+                                                   "id":  "F02",
+                                                   "state":  "planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.7527272Z"
+                                               },
+                                               {
+                                                   "id":  "F02",
+                                                   "state":  "repaired",
+                                                   "verdict":  "PASS",
+                                                   "utc":  "2026-10-04T23:57:46.7527272Z"
+                                               },
+                                               {
+                                                   "id":  "F02",
+                                                   "state":  "final-planted",
+                                                   "verdict":  "FAIL",
+                                                   "utc":  "2026-10-04T23:57:46.7836918Z"
+                                               }
+                                           ],
+                              "planted_state":  "Identified synthetic archive present in Operations"
+                          },
+                          {
+                              "probe":  "Forensic.ps1 -Check Q01",
+                              "id":  "Q01",
+                              "repair":  "Save the correct answer in Forensic Question 1.txt",
+                              "question":  "Which account changed the maintenance-script permissions in the preserved incident record?",
+                              "category":  "Forensics Questions",
+                              "preservation":  "Existing mail service/data, domain trust and access",
+                              "status":  "runtime-verified",
+                              "target":  "MAIL01",
+                              "evidence":  [
+                                               {
+                                                   "sha256":  "AD0B19AF98A6409A689CE9ACF475AA16F2C167F8E585FA708D79BC6F4032C7FF",
+                                                   "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\incident-audit.txt"
+                                               }
+                                           ],
+                              "evidenceRehearsals":  [
+                                                         {
+                                                             "id":  "Q01",
+                                                             "state":  "blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.2370731Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q01",
+                                                             "state":  "wrong",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.2683898Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q01",
+                                                             "state":  "correct",
+                                                             "verdict":  "PASS",
+                                                             "utc":  "2026-10-05T00:24:56.2993118Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q01",
+                                                             "state":  "final-blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.2993118Z"
+                                                         }
+                                                     ],
+                              "points":  4,
+                              "answerHash":  "f549900b973ac8dcae1ecd970b6dabb83f29cb763aa755a753a3fb4eb9c6f951",
+                              "dependencies":  "Retained evidence and scorer",
+                              "recovery":  "Restore the blank question template"
+                          },
+                          {
+                              "probe":  "Forensic.ps1 -Check Q02",
+                              "id":  "Q02",
+                              "repair":  "Save the correct answer in Forensic Question 2.txt",
+                              "question":  "What is the full scheduled-task path used for the unauthorized activation shown in the retained evidence?",
+                              "category":  "Forensics Questions",
+                              "preservation":  "Existing mail service/data, domain trust and access",
+                              "status":  "runtime-verified",
+                              "target":  "MAIL01",
+                              "evidence":  [
+                                               {
+                                                   "sha256":  "A6431A0AAE59EBFE2D5D421F2F1E01C9493F6828312A474E73C12DA083CC5037",
+                                                   "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\retained-task.xml"
+                                               }
+                                           ],
+                              "evidenceRehearsals":  [
+                                                         {
+                                                             "id":  "Q02",
+                                                             "state":  "blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.3152179Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q02",
+                                                             "state":  "wrong",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.3619332Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q02",
+                                                             "state":  "correct",
+                                                             "verdict":  "PASS",
+                                                             "utc":  "2026-10-05T00:24:56.5495720Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q02",
+                                                             "state":  "final-blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.5648360Z"
+                                                         }
+                                                     ],
+                              "points":  4,
+                              "answerHash":  "c1fb541afaa8071f8e5e734f56b7fe28a4b0812aa8b90aed112609fbd3526085",
+                              "dependencies":  "Retained evidence and scorer",
+                              "recovery":  "Restore the blank question template"
+                          },
+                          {
+                              "probe":  "Forensic.ps1 -Check Q03",
+                              "id":  "Q03",
+                              "repair":  "Save the correct answer in Forensic Question 3.txt",
+                              "question":  "What is the SHA-256 hash of the retained payload file?",
+                              "category":  "Forensics Questions",
+                              "preservation":  "Existing mail service/data, domain trust and access",
+                              "status":  "runtime-verified",
+                              "target":  "MAIL01",
+                              "evidence":  [
+                                               {
+                                                   "sha256":  "F3EBAEA354D683B6EF8E767CBF8B72100B4F5ABD1048426F612B43C48020607B",
+                                                   "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\retained-payload.txt"
+                                               }
+                                           ],
+                              "evidenceRehearsals":  [
+                                                         {
+                                                             "id":  "Q03",
+                                                             "state":  "blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:56.5804100Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q03",
+                                                             "state":  "wrong",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:57.0197632Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q03",
+                                                             "state":  "correct",
+                                                             "verdict":  "PASS",
+                                                             "utc":  "2026-10-05T00:24:57.0339530Z"
+                                                         },
+                                                         {
+                                                             "id":  "Q03",
+                                                             "state":  "final-blank",
+                                                             "verdict":  "FAIL",
+                                                             "utc":  "2026-10-05T00:24:57.0497312Z"
+                                                         }
+                                                     ],
+                              "points":  4,
+                              "answerHash":  "575e90b7886f9f9a68a9b1850db6e96959140e28196b6a68068d9412c2dbe90d",
+                              "dependencies":  "Retained evidence and scorer",
+                              "recovery":  "Restore the blank question template"
+                          }
+                      ],
+    "domain":  "corp.summit.test",
+    "actualOS":  "Windows Server 2022 Datacenter build 20348",
+    "preservation":  {
+                         "services":  "running",
+                         "mailConfigHashes":  "unchanged",
+                         "domainTrust":  true,
+                         "webmailPinnedLeafStatus":  200,
+                         "nativeWindowsCertificateTrust":  "baseline failed",
+                         "realMailTransactions":  "pending",
+                         "existingAdminMembership":  "preserved"
+                     },
+    "expectedRestored":  0,
+    "manualAcceptance":  "pending",
+    "probeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+    "export":  "not-performed",
+    "configHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+    "defenderApprovedExclusion":  "C:\\aeacus\\phocus.exe",
+    "status":  "runtime-verified",
+    "mailVersion":  "MailEnable 10.59",
+    "forensicCount":  3
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "contained-stop",
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "at": 2,
+    "window": 12,
+    "duration": 20
+  },
+  {
+    "id": "must-expire",
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "at": 50,
+    "window": 8,
+    "duration": 5
+  }
+]

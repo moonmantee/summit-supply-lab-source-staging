@@ -1,0 +1,25 @@
+[Unit]
+Description=Visible Summit simulated red-team agent (shop01)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/summit-red-agent/agent.py --config /etc/summit-red-agent/agent.json
+Restart=on-failure
+RestartSec=10
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/summit-red-agent
+MemoryMax=128M
+CPUQuota=10%
+TasksMax=16
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

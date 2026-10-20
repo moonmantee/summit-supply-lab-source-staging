@@ -1,0 +1,1 @@
+[{"id": "mail-smtp-restart-off", "guest": "mail01", "action": "business_restart_off", "target": "smtp", "at": 3, "window": 15, "duration": 15}]

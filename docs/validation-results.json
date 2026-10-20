@@ -1,0 +1,55 @@
+{
+  "scorer": {
+    "run": 134,
+    "passed": 134,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "portal": {
+    "run": 33,
+    "passed": 33,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "panel": {
+    "run": 52,
+    "passed": 51,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0
+  },
+  "controller-regressions": {
+    "run": 17,
+    "passed": 17,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "shell_syntax": {
+    "files": 56,
+    "errors": []
+  },
+  "powershell_syntax": {
+    "Files": 66,
+    "Errors": []
+  },
+  "package": {
+    "independent_copy_build": true,
+    "package_files": 23,
+    "all_manifest_hashes_verified": true,
+    "zip_members_verified": true,
+    "stale_package_output_refused": true,
+    "existing_workspace_refused": true,
+    "panel_workspace_created": true,
+    "private_archive_available_in_copy": false,
+    "runtime_imports_passed": true
+  },
+  "workspace_source_output_rejected": true,
+  "validation_date_local": "2026-10-19",
+  "environment": "Local Ubuntu 24.04 / Python 3.12.3 for unit/shell tests; Windows PowerShell parser for PS1 syntax",
+  "remote_lab_test_transfer": false,
+  "php_syntax_rerun": false,
+  "full_upstream_parser_acceptance": false
+}

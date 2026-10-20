@@ -1,0 +1,22 @@
+{
+    "buildId":  "forum01-20261004",
+    "expectedStart":  0,
+    "expectedSolution":  100,
+    "issueCount":  20,
+    "points":  100,
+    "organizerSid":  "S-1-5-21-4256248652-4286644801-471319587-500",
+    "bootstrapSid":  "S-1-5-21-4256248652-4286644801-471319587-1000",
+    "domainAdminsSid":  "S-1-5-21-1538098495-642441483-3435665723-512",
+    "fallbackSid":  "S-1-5-21-4256248652-4286644801-471319587-1003",
+    "auditSid":  "S-1-5-21-4256248652-4286644801-471319587-1004",
+    "contractorSid":  "S-1-5-21-4256248652-4286644801-471319587-1005",
+    "forumConfigHash":  "20CC38A314C811014B87E288D2FE4375FEC29DC46D4593AAC811DBF6B817377E",
+    "ftpFileHash":  "CE927173A62CB21FCA1629BEC81723E418E81F4FE788BEB47B4733EC1884C94E",
+    "answerHashes":  [
+                         "0d6f93a8d948c09bc8ea41844e88e5efb26fc4b801935d72fba53727175ff596",
+                         "d9eb342ecf13051d997cf2d0869f21d9c2f5284bda51586450fc57762fd3ecdc",
+                         "b8eaf43cd8fb7ae39d3f8d062d12919ebfdf356f5cab78019a75704b868021cf"
+                     ],
+    "prohibitedCredentialHash":  "CDFE970C3C0D5F069375409FEB4848DB7CD6ED60DAE68A7F1C28DCEF2B5F520E",
+    "prohibitedArchiveHash":  "89D870AB477EDCF697C586B4BE1BB7872CC0F2D3ABBE894AB96F27A116D07195"
+}

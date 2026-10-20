@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mail-imap-disable",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "imap",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

@@ -1,0 +1,8 @@
+{
+    "InitialDetectionTime":  "\/Date(1791156786192)\/",
+    "ThreatID":  2147829936,
+    "ActionSuccess":  true,
+    "Resources":  [
+                      "file:_c:\\aeacus\\phocus.exe"
+                  ]
+}

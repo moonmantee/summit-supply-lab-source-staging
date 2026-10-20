@@ -1,0 +1,387 @@
+{
+  "host": "shop01",
+  "total_points": 100,
+  "issues": [
+    {
+      "id": 1,
+      "points": 2,
+      "message": "01 - Unauthorized contractor_lab account corrected",
+      "category": "Accounts/SSH",
+      "probe": "1",
+      "status": "staged-rehearsed",
+      "repair": "Exact local account absent; authorized identities remain."
+    },
+    {
+      "id": 2,
+      "points": 4,
+      "message": "02 - Unauthorized second UID 0 account corrected",
+      "category": "Accounts/SSH",
+      "probe": "2",
+      "status": "staged-rehearsed",
+      "repair": "Only root has local UID 0."
+    },
+    {
+      "id": 3,
+      "points": 2,
+      "message": "03 - Ordinary training employee in sudo group corrected",
+      "category": "Accounts/SSH",
+      "probe": "3",
+      "status": "staged-rehearsed",
+      "repair": "Employee retained with no unauthorized administrative membership."
+    },
+    {
+      "id": 4,
+      "points": 2,
+      "message": "04 - nobody in sudo group corrected",
+      "category": "Accounts/SSH",
+      "probe": "4",
+      "status": "staged-rehearsed",
+      "repair": "nobody retained as a system account, no unauthorized sudo membership."
+    },
+    {
+      "id": 5,
+      "points": 4,
+      "message": "05 - Unauthorized passwordless sudo grant corrected",
+      "category": "Accounts/SSH",
+      "probe": "5",
+      "status": "staged-rehearsed",
+      "repair": "Planted grant removed; effective sudo authorization denies the training principal."
+    },
+    {
+      "id": 6,
+      "points": 2,
+      "message": "06 - Weak password on authorized training employee corrected",
+      "category": "Accounts/SSH",
+      "probe": "6",
+      "status": "staged-rehearsed",
+      "repair": "Account retained, unlocked with active hash; hash differs from planted credential. This checks replacement, not new-password strength."
+    },
+    {
+      "id": 7,
+      "points": 2,
+      "message": "07 - Local password minimum too low corrected",
+      "category": "Accounts/SSH",
+      "probe": "7",
+      "status": "staged-rehearsed",
+      "repair": "Effective local password minimum at least 14 characters."
+    },
+    {
+      "id": 8,
+      "points": 2,
+      "message": "08 - Local password-quality enforcement disabled corrected",
+      "category": "Accounts/SSH",
+      "probe": "8",
+      "status": "staged-rehearsed",
+      "repair": "Effective local PAM password-quality integration enabled without bypass."
+    },
+    {
+      "id": 9,
+      "points": 2,
+      "message": "09 - Local failed-login lockout disabled corrected",
+      "category": "Accounts/SSH",
+      "probe": "9",
+      "status": "staged-rehearsed",
+      "repair": "Local lockout threshold 5, failure interval 900 seconds, unlock time 900 seconds; recovery preserved."
+    },
+    {
+      "id": 10,
+      "points": 2,
+      "message": "10 - Local password history disabled corrected",
+      "category": "Accounts/SSH",
+      "probe": "10",
+      "status": "staged-rehearsed",
+      "repair": "Effective local history at least five passwords."
+    },
+    {
+      "id": 11,
+      "points": 2,
+      "message": "11 - Training employee password never expires corrected",
+      "category": "Accounts/SSH",
+      "probe": "11",
+      "status": "staged-rehearsed",
+      "repair": "Required employee account maximum age at most 90 days and positive; account retained and usable."
+    },
+    {
+      "id": 12,
+      "points": 2,
+      "message": "12 - Direct root SSH login allowed corrected",
+      "category": "Accounts/SSH",
+      "probe": "12",
+      "status": "staged-rehearsed",
+      "repair": "Effective root-context PermitRootLogin no; authorized SSH works."
+    },
+    {
+      "id": 13,
+      "points": 2,
+      "message": "13 - SSH permits empty passwords corrected",
+      "category": "Accounts/SSH",
+      "probe": "13",
+      "status": "staged-rehearsed",
+      "repair": "Effective PermitEmptyPasswords no. Never stage an actual blank-password SSH credential."
+    },
+    {
+      "id": 14,
+      "points": 4,
+      "message": "14 - SSH access includes unauthorized users corrected",
+      "category": "Accounts/SSH",
+      "probe": "14",
+      "status": "staged-rehearsed",
+      "repair": "Effective access matches published administrator roster and rejects unauthorized training principal."
+    },
+    {
+      "id": 15,
+      "points": 2,
+      "message": "15 - Unauthorized SSH public key corrected",
+      "category": "Accounts/SSH",
+      "probe": "15",
+      "status": "staged-rehearsed",
+      "repair": "Planted key absent from effective key sources of designated training identity; approved keys retained."
+    },
+    {
+      "id": 16,
+      "points": 2,
+      "message": "16 - Unsafe training administrator SSH permissions corrected",
+      "category": "Accounts/SSH",
+      "probe": "16",
+      "status": "staged-rehearsed",
+      "repair": "Correct ownership, restrictive .ssh/key modes and ACLs; required key retained."
+    },
+    {
+      "id": 17,
+      "points": 4,
+      "message": "17 - Host firewall disabled corrected",
+      "category": "Defense",
+      "probe": "17",
+      "status": "staged-rehearsed",
+      "repair": "Active host firewall enabled now and persistently."
+    },
+    {
+      "id": 18,
+      "points": 4,
+      "message": "18 - Unnecessary inbound services allowed corrected",
+      "category": "Defense",
+      "probe": "18",
+      "status": "staged-rehearsed",
+      "repair": "Effective runtime/persistent IPv4 and applicable IPv6 rules permit approved web and SSH flows and block unauthorized inbound flows."
+    },
+    {
+      "id": 19,
+      "points": 2,
+      "message": "19 - Applicable AppArmor profile in complain mode corrected",
+      "category": "Defense",
+      "probe": "19",
+      "status": "staged-rehearsed",
+      "repair": "Selected supported application profile loaded and enforcing; application works. Selection requires live inventory; do not claim Apache confinement when only an unrelated profile is enforced."
+    },
+    {
+      "id": 20,
+      "points": 2,
+      "message": "20 - auditd disabled corrected",
+      "category": "Defense",
+      "probe": "20",
+      "status": "staged-rehearsed",
+      "repair": "auditd installed, active and enabled."
+    },
+    {
+      "id": 21,
+      "points": 2,
+      "message": "21 - Account/privilege audit rules missing corrected",
+      "category": "Defense",
+      "probe": "21",
+      "status": "staged-rehearsed",
+      "repair": "Defined account and sudo configuration watches loaded and persistent."
+    },
+    {
+      "id": 22,
+      "points": 2,
+      "message": "22 - Persistent system logging disabled corrected",
+      "category": "Defense",
+      "probe": "22",
+      "status": "staged-rehearsed",
+      "repair": "Effective persistent journald storage and observable persistent logs."
+    },
+    {
+      "id": 23,
+      "points": 2,
+      "message": "23 - Automatic security updates disabled corrected",
+      "category": "Defense",
+      "probe": "23",
+      "status": "staged-rehearsed",
+      "repair": "Effective unattended security-update configuration and scheduling enabled. Controlled lab update source is required for functional update validation."
+    },
+    {
+      "id": 24,
+      "points": 2,
+      "message": "24 - Apache package on hold corrected",
+      "category": "Defense",
+      "probe": "24",
+      "status": "staged-rehearsed",
+      "repair": "Unauthorized hold absent for the installed Apache package; Apache remains installed."
+    },
+    {
+      "id": 25,
+      "points": 4,
+      "message": "25 - Unsafe shadow permissions corrected",
+      "category": "Web/permissions",
+      "probe": "25",
+      "status": "staged-rehearsed",
+      "repair": "/etc/shadow retained, root-owned, approved shadow group/mode and no unauthorized ACL access. Baseline target root:shadow 0640 unless verified Ubuntu baseline requires a stricter approved mode."
+    },
+    {
+      "id": 26,
+      "points": 4,
+      "message": "26 - Sudo configuration writable corrected",
+      "category": "Web/permissions",
+      "probe": "26",
+      "status": "staged-rehearsed",
+      "repair": "Sudoers and included files/parent paths protected from ordinary writes; visudo validation succeeds."
+    },
+    {
+      "id": 27,
+      "points": 4,
+      "message": "27 - Apache configuration writable corrected",
+      "category": "Web/permissions",
+      "probe": "27",
+      "status": "staged-rehearsed",
+      "repair": "Active Apache files and parent paths protected from unauthorized writes; configuration validates."
+    },
+    {
+      "id": 28,
+      "points": 4,
+      "message": "28 - Storefront writable by ordinary users or web worker corrected",
+      "category": "Web/permissions",
+      "probe": "28",
+      "status": "staged-rehearsed",
+      "repair": "Required content readable, no unauthorized modification through ownership, modes, parent paths or ACLs; preserve runtime application write directories identified in inventory."
+    },
+    {
+      "id": 29,
+      "points": 2,
+      "message": "29 - TLS private key readable by ordinary users corrected",
+      "category": "Web/permissions",
+      "probe": "29",
+      "status": "staged-rehearsed",
+      "repair": "Key retained, approved ownership, restrictive permissions and ACLs; HTTPS works."
+    },
+    {
+      "id": 30,
+      "points": 2,
+      "message": "30 - Directory listing enabled corrected",
+      "category": "Web/permissions",
+      "probe": "30",
+      "status": "staged-rehearsed",
+      "repair": "Dedicated fixture directory cannot be enumerated; regular catalog works."
+    },
+    {
+      "id": 31,
+      "points": 2,
+      "message": "31 - Apache status page exposed corrected",
+      "category": "Web/permissions",
+      "probe": "31",
+      "status": "staged-rehearsed",
+      "repair": "Named status endpoint unavailable to unauthorized lab clients."
+    },
+    {
+      "id": 32,
+      "points": 4,
+      "message": "32 - Public backup with synthetic credentials corrected",
+      "category": "Web/permissions",
+      "probe": "32",
+      "status": "staged-rehearsed",
+      "repair": "Named backup URLs do not reveal fixture content; actual secret files are never planted."
+    },
+    {
+      "id": 33,
+      "points": 2,
+      "message": "33 - Apache exposes dotfiles corrected",
+      "category": "Web/permissions",
+      "probe": "33",
+      "status": "staged-rehearsed",
+      "repair": "Named fixture dotfile requests denied without breaking approved routes."
+    },
+    {
+      "id": 34,
+      "points": 2,
+      "message": "34 - Unnecessary CGI execution enabled corrected",
+      "category": "Web/permissions",
+      "probe": "34",
+      "status": "staged-rehearsed",
+      "repair": "CGI disabled in catalog context, named harmless fixture cannot execute; preserve any verified required application context."
+    },
+    {
+      "id": 35,
+      "points": 2,
+      "message": "35 - Unnecessary SSI enabled corrected",
+      "category": "Web/permissions",
+      "probe": "35",
+      "status": "staged-rehearsed",
+      "repair": "SSI disabled in catalog context, named harmless fixture cannot execute."
+    },
+    {
+      "id": 36,
+      "points": 2,
+      "message": "36 - Apache access logging disabled corrected",
+      "category": "Web/permissions",
+      "probe": "36",
+      "status": "staged-rehearsed",
+      "repair": "Required access log configured and receives controlled requests."
+    },
+    {
+      "id": 37,
+      "points": 2,
+      "message": "37 - Apache error logging disabled corrected",
+      "category": "Web/permissions",
+      "probe": "37",
+      "status": "staged-rehearsed",
+      "repair": "Required error log configured and receives controlled error events."
+    },
+    {
+      "id": 38,
+      "points": 2,
+      "message": "38 - Forensic question 1: unexpected client identified",
+      "category": "Forensics",
+      "planted_state": "Question 1 answer is blank; fictional incident evidence is readable.",
+      "dependencies": [
+        "Shared writable question file",
+        "Preserved synthetic Apache evidence"
+      ],
+      "preservation": "Preserve real logs, business data, all required services and approved identities.",
+      "recovery": "Unique private forensic migration archive restores original scorer and marker fixtures.",
+      "probe": "38",
+      "status": "prepared",
+      "repair": "Question 1 contains exactly one correct Answer line; preserved synthetic evidence remains available."
+    },
+    {
+      "id": 39,
+      "points": 2,
+      "message": "39 - Forensic question 2: exposed backup path identified",
+      "category": "Forensics",
+      "planted_state": "Question 2 answer is blank; fictional incident evidence is readable.",
+      "dependencies": [
+        "Shared writable question file",
+        "Preserved synthetic Apache evidence"
+      ],
+      "preservation": "Preserve real logs, business data, all required services and approved identities.",
+      "recovery": "Unique private forensic migration archive restores original scorer and marker fixtures.",
+      "probe": "39",
+      "status": "prepared",
+      "repair": "Question 2 contains exactly one correct Answer line; preserved synthetic evidence remains available."
+    },
+    {
+      "id": 40,
+      "points": 2,
+      "message": "40 - Forensic question 3: persistence unit identified",
+      "category": "Forensics",
+      "planted_state": "Question 3 answer is blank; live markers are retired and fictional evidence remains readable.",
+      "dependencies": [
+        "Shared writable question file",
+        "Preserved synthetic journal evidence"
+      ],
+      "preservation": "Retire only the reviewed training activation and SUID bit; preserve legitimate services and executables.",
+      "recovery": "Unique private forensic migration archive restores original scorer and marker fixtures.",
+      "probe": "40",
+      "status": "prepared",
+      "repair": "Question 3 contains exactly one correct Answer line; preserved synthetic evidence remains available."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "marker-check",
+    "guest": "shop01",
+    "action": "marker",
+    "target": "notice",
+    "at": 2,
+    "window": 15
+  }
+]

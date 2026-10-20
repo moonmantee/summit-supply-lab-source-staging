@@ -1,0 +1,11 @@
+[
+  {
+    "id": "forum-ftp-restart-off",
+    "guest": "forum01",
+    "action": "business_restart_off",
+    "target": "ftp",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

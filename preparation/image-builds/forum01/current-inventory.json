@@ -1,0 +1,19 @@
+{
+    "computer":  "FORUM01",
+    "domain":  "corp.summit.test",
+    "domainMember":  true,
+    "os":  "Microsoft Windows Server 2022 Datacenter",
+    "version":  "10.0.20348",
+    "architecture":  "64-bit",
+    "forumStatus":  200,
+    "forumTitle":  "Summit Partner Form - Index page",
+    "phpIni":  "Configuration File (php.ini) Path: \"\"\r\nLoaded Configuration File:         \"C:\\PHP\\php.ini\"\r\nScan for additional .ini files in: (none)\r\nAdditional .ini files parsed:      (none)\r\n",
+    "phpEffective":  "\r\nallow_url_include =\u003e On =\u003e On\r\ndisplay_errors =\u003e Off =\u003e Off\r\nexpose_php =\u003e On =\u003e On\r\nlog_errors =\u003e Off =\u003e Off\r\nsession.cookie_httponly =\u003e Off =\u003e Off\r\n\r\n\r\n",
+    "configAcl":  "O:BAG:BAD:PAI(A;;FA;;;SY)(A;;FA;;;BA)(A;;0x1301bf;;;BU)(A;;FR;;;IS)",
+    "webRootAcl":  "O:SYG:SYD:AI(A;;0x1200a9;;;IS)(A;OICIIO;GXGR;;;IS)(A;ID;FA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;OICIIOID;GA;;;S-1-5-80-956008885-3418522649-1831038044-1853292631-2271478464)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)(A;OICIIOID;GA;;;CO)",
+    "phpIniAcl":  "O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;BU)",
+    "ftpFileHash":  "CE927173A62CB21FCA1629BEC81723E418E81F4FE788BEB47B4733EC1884C94E",
+    "forumConfigHash":  "20CC38A314C811014B87E288D2FE4375FEC29DC46D4593AAC811DBF6B817377E",
+    "aeacusHash":  "2CBD63BA2AA2284B6FEDE844EA389682B3FAD8229D530769AB537F686A15AB0F",
+    "phocusHash":  "BF266B0E2BFCCB6AA871D61D2D9584ACBB2B11D19D5598E4435C78294A57DD4A"
+}

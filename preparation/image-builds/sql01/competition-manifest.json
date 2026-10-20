@@ -1,0 +1,853 @@
+{
+  "machine": "sql01",
+  "os": "Linux Mint 22.3 Zena",
+  "role": "MariaDB shop/forum server",
+  "domain": "corp.summit.test",
+  "approved_users": [
+    "jwang",
+    "alex.admin@corp.summit.test",
+    "taylor.admin@corp.summit.test"
+  ],
+  "required_ports": [
+    22,
+    3306
+  ],
+  "business_data": [
+    "summit_shop",
+    "forum"
+  ],
+  "management": "Strict pinned-key SSH via range-fw, plus user-confirmed guest console",
+  "recovery_snapshot": "SQL01-before-competition-20261004 (creation verification recorded in STATUS.md)",
+  "scoring": {
+    "engine": "Aeacus/Phocus 2.1.1",
+    "count": 30,
+    "points": 100,
+    "start": 0,
+    "solution": 100,
+    "restored": 0,
+    "observed_scores": {
+      "starting": 0,
+      "solution": 100,
+      "restored": 0,
+      "encrypted_runtime": 0
+    },
+    "report_evidence": "verified-production-report.html"
+  },
+  "status": "runtime-verified",
+  "guest_rehearsals": "passed (user console output and completion receipt)",
+  "manual_acceptance": "pending",
+  "export": "pending",
+  "issues": [
+    {
+      "id": 1,
+      "category": "Application Security",
+      "points": 3,
+      "message": "MariaDB LOCAL INFILE disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Runtime and native persistent local_infile disabled",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 1",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "User Auditing",
+      "points": 3,
+      "message": "Unauthorized database account removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "training_vendor absent, required SQL identities retained",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 2",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Application Security",
+      "points": 3,
+      "message": "Shop global file privilege removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "No effective FILE grant, including inherited roles",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 3",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Application Security",
+      "points": 4,
+      "message": "Forum cross-database access removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "No effective forum_app privileges on shop data",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 4",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Application Security",
+      "points": 3,
+      "message": "Direct root SSH disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective PermitRootLogin no",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 5",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "Application Security",
+      "points": 3,
+      "message": "Empty-password SSH disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective PermitEmptyPasswords no; no usable empty-password user planted",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 6",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "Application Security",
+      "points": 3,
+      "message": "SSH X11 forwarding disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective X11Forwarding no",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 7",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "User Auditing",
+      "points": 3,
+      "message": "Employee excess administrator access removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "No excess effective sudo authorization for summit_employee",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 8",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "User Auditing",
+      "points": 3,
+      "message": "Contractor excess administrator access removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "No excess effective sudo authorization for summit_contractor",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 9",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "Application Security",
+      "points": 3,
+      "message": "Operational backup permissions repaired",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Retained synthetic backup owned by root, restrictive mode and ACL",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 10",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "Malware",
+      "points": 3,
+      "message": "Unauthorized cron marker removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Exact cron activation and live payload absent",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 11",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "Malware",
+      "points": 3,
+      "message": "Unauthorized systemd marker removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Timer/service disabled across activation paths and live payload absent",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 12",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "Prohibited Files",
+      "points": 3,
+      "message": "Fictional plaintext credentials removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Designated marker absent from stated shared and home scope",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 13",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "Prohibited Files",
+      "points": 3,
+      "message": "Unauthorized personal media removed",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Designated marker absent from stated shared and home scope",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 14",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "Service Auditing",
+      "points": 3,
+      "message": "Discovery activation disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Avahi service/socket inactive and disabled or masked",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 15",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "Service Auditing",
+      "points": 3,
+      "message": "Printing activation disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "CUPS service/socket/path inactive and disabled or masked",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 16",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "Local Policy",
+      "points": 3,
+      "message": "Persistent logging restored",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Native Storage=persistent and journald has persistent journal open",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 17",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "Application Security",
+      "points": 3,
+      "message": "SSH authentication attempt limit repaired",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective MaxAuthTries between one and three",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 18",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 19,
+      "category": "Application Security",
+      "points": 3,
+      "message": "SSH agent forwarding disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective AllowAgentForwarding no",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 19",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "Application Security",
+      "points": 3,
+      "message": "SSH TCP forwarding disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective AllowTcpForwarding no",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 20",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Application Security",
+      "points": 3,
+      "message": "SSH user environment injection disabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective PermitUserEnvironment no",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 21",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "Local Policy",
+      "points": 3,
+      "message": "Verbose SSH authentication logging restored",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective LogLevel VERBOSE",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 22",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 23,
+      "category": "Defensive Countermeasures",
+      "points": 3,
+      "message": "Hard-link protection enabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective runtime and native boot configuration fs.protected_hardlinks >=1",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 23",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 24,
+      "category": "Defensive Countermeasures",
+      "points": 3,
+      "message": "Symbolic-link protection enabled",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective runtime and native boot configuration fs.protected_symlinks >=1",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 24",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "Defensive Countermeasures",
+      "points": 3,
+      "message": "Kernel pointer disclosure restricted",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective runtime and native boot configuration kernel.kptr_restrict >=1",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 25",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 26,
+      "category": "Defensive Countermeasures",
+      "points": 3,
+      "message": "Kernel message access restricted",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Effective runtime and native boot configuration kernel.dmesg_restrict >=1",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 26",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 27,
+      "category": "Uncategorized Operating System Settings",
+      "points": 3,
+      "message": "Shell startup permissions repaired",
+      "planted_state": "Policy-inconsistent opposite of repair; question answers blank",
+      "repair": "Retained inert profile script root-owned and no ordinary-user write ACL",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 27",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 28,
+      "category": "Forensics Questions",
+      "points": 6,
+      "message": "Forensic account attribution answered",
+      "planted_state": "Blank individual answer",
+      "repair": "Only individual Answer section matches private answer",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 28",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "Forensics Questions",
+      "points": 6,
+      "message": "Forensic timer attribution answered",
+      "planted_state": "Blank individual answer",
+      "repair": "Only individual Answer section matches private answer",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 29",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "Forensics Questions",
+      "points": 6,
+      "message": "Forensic payload fingerprint answered",
+      "planted_state": "Blank individual answer",
+      "repair": "Only individual Answer section matches private answer",
+      "probe": "/usr/bin/python3 /opt/summit-sql01/probes.py 30",
+      "dependencies": [
+        "mariadb",
+        "ssh",
+        "sssd",
+        "root-readable private metadata"
+      ],
+      "preserve": [
+        "shop/forum data and own-schema app rights",
+        "jwang access",
+        "domain trust",
+        "approved users"
+      ],
+      "recovery": "Unique /var/backups/summit-sql01-competition-* native baseline; scoped automatic rollback and independent prebuild VM snapshot",
+      "status": "runtime-verified",
+      "evidence": [
+        "User-confirmed protected/planted/repaired/restored guest rehearsal and 100/100 solution",
+        "Fresh SSH verification of encrypted Phocus 0/100 on 2026-10-04"
+      ]
+    }
+  ],
+  "recovery_record": "/var/backups/summit-sql01-competition-3p8p1mwe"
+}

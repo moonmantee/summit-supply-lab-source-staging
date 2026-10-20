@@ -1,0 +1,11 @@
+Shop01 - Forensic Question 3 (2 points)
+
+Use the preserved SYNTHETIC journal-excerpt.log and incident-summary.txt
+in /opt/summit-evidence/shop01. Which systemd service was used for the
+unauthorized persistence marker? Submit the full unit name including .service.
+
+The live marker has been retired. The preserved evidence remains available.
+Write your answer after the equals sign below, then save this file.
+Keep exactly one Answer = line. Each question is scored independently.
+
+Answer =

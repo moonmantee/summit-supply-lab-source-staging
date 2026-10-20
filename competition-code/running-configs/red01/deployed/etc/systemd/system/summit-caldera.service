@@ -1,0 +1,29 @@
+[Unit]
+Description=Summit CALDERA management-only stage B
+After=network.target
+
+[Service]
+User=summit-caldera
+Group=summit-caldera
+WorkingDirectory=/opt/summit-caldera
+ExecStart=/opt/summit-caldera/.venv/bin/python /opt/summit-caldera/launch.py
+Restart=no
+KillSignal=SIGTERM
+TimeoutStopSec=45
+UMask=0077
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/etc/summit-caldera/runtime /var/lib/summit-caldera /var/log/summit-caldera
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+MemoryHigh=900M
+MemoryMax=1200M
+CPUQuota=75%
+TasksMax=128
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[Unit]
+Description=Inert SQL01 competition marker
+[Service]
+Type=oneshot
+User=summit_marker
+Group=nogroup
+ExecStart=/usr/bin/python3 /usr/local/lib/summit-sql01/timer-marker.py
+StateDirectory=summit-sql01-marker
+NoNewPrivileges=yes
+PrivateNetwork=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX
+ReadWritePaths=/var/lib/summit-sql01-marker

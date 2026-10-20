@@ -1,0 +1,174 @@
+{
+    "machine":  "MAIL01",
+    "issues":  28,
+    "securityControls":  25,
+    "forensicQuestions":  3,
+    "points":  100,
+    "startingScore":  0,
+    "probeErrors":  0,
+    "results":  [
+                    {
+                        "id":  "U01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "U02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "S01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "S02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "S03",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "W01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "W02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "W03",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "W04",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "L01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "L02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "L03",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "P01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "P02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "P03",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "A01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "A02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "A03",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "A04",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "M01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "M02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "D01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "O01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "F01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "F02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "Q01",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "Q02",
+                        "verdict":  "FAIL"
+                    },
+                    {
+                        "id":  "Q03",
+                        "verdict":  "FAIL"
+                    }
+                ],
+    "services":  [
+                     {
+                         "Name":  "MEDMS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MEIMAPS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MELCS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MEMTAS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MEPOCS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MEPOPS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "MESMTPCS",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "sshd",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "W3SVC",
+                         "Status":  4
+                     },
+                     {
+                         "Name":  "WinDefend",
+                         "Status":  4
+                     }
+                 ],
+    "encryptedScorerStatus":  "Running",
+    "encryptedScorerStartup":  "Automatic",
+    "reportUtc":  "2026-10-05T00:30:02.0492939Z",
+    "probeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+    "domainTrust":  true,
+    "defenderRealTime":  true,
+    "manualAcceptance":  "pending",
+    "export":  "not-performed",
+    "utc":  "2026-10-05T00:31:43.7460409Z"
+}

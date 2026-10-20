@@ -1,0 +1,45 @@
+[
+  {
+    "id": "sql-popup",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2,
+    "window": 15
+  },
+  {
+    "id": "sql-business_stop",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 20,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "sql-business_restart_off",
+    "guest": "sql01",
+    "action": "business_restart_off",
+    "target": "mariadb",
+    "at": 250,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "sql-business_disable",
+    "guest": "sql01",
+    "action": "business_disable",
+    "target": "mariadb",
+    "at": 480,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "sql-must-expire",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 700,
+    "window": 8
+  }
+]

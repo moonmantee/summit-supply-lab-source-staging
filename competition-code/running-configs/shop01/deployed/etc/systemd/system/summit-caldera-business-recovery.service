@@ -1,0 +1,14 @@
+[Unit]
+Description=Passive contestant service-repair observer
+StartLimitIntervalSec=0
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/summit-caldera-fixtures/business_actions.py recover
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+UMask=0077
+MemoryMax=64M
+TasksMax=24
+TimeoutStartSec=45

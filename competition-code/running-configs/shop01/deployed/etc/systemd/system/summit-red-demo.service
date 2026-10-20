@@ -1,0 +1,20 @@
+[Unit]
+Description=Summit disposable service for reversible outage exercises
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+ExecStart=/usr/bin/python3 -I /opt/summit-red-agent/demo_service.py
+WorkingDirectory=/opt/summit-red-agent
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+MemoryMax=64M
+TasksMax=8
+TimeoutStopSec=2
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

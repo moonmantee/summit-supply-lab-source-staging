@@ -1,0 +1,105 @@
+{
+    "RootThumbprint":  "5A54A8669641D6DE201E68A9E7AF58650923F3C6",
+    "Roster":  [
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1603",
+                       "Account":  "maya.chen",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1604",
+                       "Account":  "emma.wilson",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1605",
+                       "Account":  "liam.brooks",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1606",
+                       "Account":  "jordan.lee",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1607",
+                       "Account":  "ava.thompson",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1608",
+                       "Account":  "noah.garcia",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1609",
+                       "Account":  "sam.patel",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1610",
+                       "Account":  "olivia.martinez",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1611",
+                       "Account":  "ethan.clark",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1612",
+                       "Account":  "isabella.nguyen",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1613",
+                       "Account":  "lucas.reed",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1614",
+                       "Account":  "mia.robinson",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1615",
+                       "Account":  "benjamin.scott",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1616",
+                       "Account":  "charlotte.adams",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1617",
+                       "Account":  "alex.morgan",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1618",
+                       "Account":  "taylor.ross",
+                       "Role":  "standard"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1619",
+                       "Account":  "alex.admin",
+                       "Role":  "admin"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1620",
+                       "Account":  "taylor.admin",
+                       "Role":  "admin"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1621",
+                       "Account":  "casey.turner",
+                       "Role":  "departed"
+                   },
+                   {
+                       "SID":  "S-1-5-21-1538098495-642441483-3435665723-1622",
+                       "Account":  "drew.parker",
+                       "Role":  "departed"
+                   }
+               ]
+}

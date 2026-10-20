@@ -1,0 +1,7 @@
+[Unit]
+Description=SUMMIT-TRAINING-SYSTEMD-MARKER
+[Timer]
+OnBootSec=120
+OnUnitActiveSec=300
+[Install]
+WantedBy=timers.target

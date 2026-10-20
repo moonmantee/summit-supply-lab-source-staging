@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hour4-pilot-mail01-web",
+    "guest": "mail01",
+    "target": "web",
+    "action": "business_launch_fault",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

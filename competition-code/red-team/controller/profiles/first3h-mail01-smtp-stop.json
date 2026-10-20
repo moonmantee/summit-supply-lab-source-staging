@@ -1,0 +1,11 @@
+[
+  {
+    "id": "mail-smtp-stop",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "smtp",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

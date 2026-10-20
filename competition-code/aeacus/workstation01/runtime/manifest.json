@@ -1,0 +1,417 @@
+{
+  "machine": "workstation01",
+  "os": "AlmaLinux 9.8",
+  "snapshot": "user-confirmed",
+  "issues": [
+    {
+      "id": 1,
+      "category": "Account Policy",
+      "points": 2,
+      "planted_state": "Local password minimum length set too low",
+      "repair": "Effective local PAM password-quality minimum at least 14 characters; controlled password-change test rejects a shorter password.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 2,
+      "category": "Account Policy",
+      "points": 2,
+      "planted_state": "Local password-quality enforcement bypassed",
+      "repair": "Correct authselect-managed PAM integration and effective quality enforcement; a deliberately weak test password is rejected without printing it.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 3,
+      "category": "Account Policy",
+      "points": 2,
+      "planted_state": "Local failed-login lockout disabled",
+      "repair": "pam_faillock integrated and local-only threshold 5, interval 900 seconds, unlock time 900 seconds; preserve domain authentication and recovery.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 4,
+      "category": "Account Policy",
+      "points": 2,
+      "planted_state": "Local password history disabled",
+      "repair": "Effective history of at least 5 passwords, with local password reuse rejected.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 5,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "Direct root SSH login allowed",
+      "repair": "Effective root-context PermitRootLogin no; authorized jwang key login still works.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-configuration-repair-rehearsed"
+    },
+    {
+      "id": 6,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "SSH configured to permit empty passwords",
+      "repair": "Effective PermitEmptyPasswords no. Do not create an actual blank-password SSH account.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-configuration-repair-rehearsed"
+    },
+    {
+      "id": 7,
+      "category": "Application Security",
+      "points": 4,
+      "planted_state": "SSH authorization too broad",
+      "repair": "Effective SSH AllowGroups restricted to jwang, competitor-recovery and linux-workstation-admins@corp.summit.test; preserve approved access and deny ordinary/unauthorized users.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-configuration-repair-rehearsed"
+    },
+    {
+      "id": 8,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "Training user's authorized_keys ownership/mode unsafe",
+      "repair": "Correct user ownership, parent directory mode 0700, key file mode 0600, no unexpected writable ACLs. Use a separate training account, not jwang's working key file.",
+      "implementation_status": "live-engine-validated",
+      "target_local_account": "summit-keyuser",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 9,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "Firefox phishing/malware protection disabled",
+      "repair": "Effective protection enabled in designated employee profiles, with no overriding disabling policy.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 10,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "Firefox dangerous-download protection disabled",
+      "repair": "Effective download protection enabled in designated employee profiles.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 11,
+      "category": "Application Security",
+      "points": 2,
+      "planted_state": "Unauthorized synthetic CA trusted",
+      "repair": "Planted certificate absent from effective system trust by fingerprint; preserve Summit business CA and standard trust. Keep the synthetic CA private key outside the guest.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 12,
+      "category": "Application Security",
+      "points": 4,
+      "planted_state": "Business application settings editable by ordinary employees",
+      "repair": "/etc/summit-workstation/app.conf and parent path root-controlled, no ordinary-user write access through mode bits or ACLs. Application continues to read its settings.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 13,
+      "category": "Application Updates",
+      "points": 2,
+      "planted_state": "DNF exclusion prevents Firefox updates",
+      "repair": "No effective global or enabled-repository exclusion blocking Firefox; verify with a controlled approved update source when available.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 14,
+      "category": "Application Updates",
+      "points": 2,
+      "planted_state": "DNF exclusion prevents gedit updates",
+      "repair": "No effective global or enabled-repository exclusion blocking gedit; maintain the installed application. No package downgrade required.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 15,
+      "category": "Defensive Countermeasures",
+      "points": 4,
+      "planted_state": "Active interface assigned to overly permissive firewalld policy",
+      "repair": "firewalld enabled/running; effective active zone blocks unauthorized inbound access and permits required organizer/scorer SSH. Runtime and permanent policy agree.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 16,
+      "category": "Defensive Countermeasures",
+      "points": 4,
+      "planted_state": "SELinux permissive at runtime and next boot",
+      "repair": "Enforcing now and persistently, no disabling kernel arguments, required login/SSH/scoring operations functional.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 17,
+      "category": "Forensics",
+      "points": 4,
+      "planted_state": "Question: which account made the unauthorized change?",
+      "repair": "Answer matches the account recorded in preserved scenario audit evidence. Preserve evidence independently of live log retention.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "question-installed-positive-negative-tested",
+      "answer_file": "/srv/summit-competition/Forensic-Question-1.txt"
+    },
+    {
+      "id": 18,
+      "category": "Forensics",
+      "points": 4,
+      "planted_state": "Question: how does the suspicious payload persist?",
+      "repair": "Answer identifies the staged systemd unit/timer and payload path from preserved evidence.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "question-installed-positive-negative-tested",
+      "answer_file": "/srv/summit-competition/Forensic-Question-2.txt"
+    },
+    {
+      "id": 19,
+      "category": "Forensics",
+      "points": 4,
+      "planted_state": "Question: what is the payload SHA-256?",
+      "repair": "Correct hash of the preserved inert payload; file remains available after live cleanup.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "question-installed-positive-negative-tested",
+      "answer_file": "/srv/summit-competition/Forensic-Question-3.txt"
+    },
+    {
+      "id": 20,
+      "category": "Local Policy",
+      "points": 4,
+      "planted_state": "Domain competitor administration permits sudo password bypass",
+      "repair": "Both approved domain competitors require authentication for all authorized sudo operations; no effective NOPASSWD alternate. Preserve domain administration and the separate local fallback.",
+      "implementation_status": "probe-unit-tested-after-domain-migration",
+      "scenario_status": "planted-and-repair-rehearsed",
+      "target_domain_accounts": [
+        "alex.admin@corp.summit.test",
+        "taylor.admin@corp.summit.test"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "Local Policy",
+      "points": 2,
+      "planted_state": "Domain competitor sudo credential caching exceeds policy",
+      "repair": "Effective sudo timestamp_timeout between 0 and 5 minutes for both approved domain competitors, including per-context overrides. Preserve the separate local fallback.",
+      "implementation_status": "probe-unit-tested-after-domain-migration",
+      "scenario_status": "planted-and-repair-rehearsed",
+      "target_domain_accounts": [
+        "alex.admin@corp.summit.test",
+        "taylor.admin@corp.summit.test"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "Local Policy",
+      "points": 2,
+      "planted_state": "Audit collection disabled",
+      "repair": "auditd active/enabled and required scenario account-change audit events collected. Required rule set will be captured in the scenario manifest.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 23,
+      "category": "Local Policy",
+      "points": 2,
+      "planted_state": "Journald stores logs only in memory",
+      "repair": "Persistent journal configured and writable with appropriate permissions; verify a marker survives reboot.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 24,
+      "category": "Malware",
+      "points": 4,
+      "planted_state": "Unauthorized cron entry invokes harmless marker script",
+      "repair": "Cron persistence absent and live payload removed; relocating either artifact does not count as remediation.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 25,
+      "category": "Malware",
+      "points": 4,
+      "planted_state": "Unauthorized systemd timer/service invokes harmless marker script",
+      "repair": "Timer/service stopped, disabled, unit overrides removed, live payload removed; preserve evidence copy.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 26,
+      "category": "Operating System Updates",
+      "points": 2,
+      "planted_state": "Automatic security-update mechanism absent/disabled",
+      "repair": "Install/configure supported dnf-automatic security-update timer against approved repositories; verify scheduler and configuration plus a controlled run. Report repository failures separately.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 27,
+      "category": "Prohibited Files",
+      "points": 2,
+      "planted_state": "Fictional company credentials in plaintext",
+      "repair": "Planted credential-content artifact absent from designated user-accessible locations, including renamed copies; no real passwords used.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 28,
+      "category": "Prohibited Files",
+      "points": 2,
+      "planted_state": "Unauthorized personal-media archive",
+      "repair": "Planted sample archive/content removed from designated user locations; preserve business documents. Use original/public-domain sample content.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 29,
+      "category": "Service Auditing",
+      "points": 2,
+      "planted_state": "Avahi discovery enabled without business authorization",
+      "repair": "avahi-daemon stopped and disabled/masked; applicable socket activation cannot restart it. README states discovery is unnecessary.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 30,
+      "category": "Service Auditing",
+      "points": 2,
+      "planted_state": "CUPS printing enabled without business authorization",
+      "repair": "Printing service stopped and disabled/masked with socket/path activation handled. README states printing is unnecessary.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 31,
+      "category": "OS Settings",
+      "points": 2,
+      "planted_state": "GNOME automatic screen locking disabled",
+      "repair": "Effective automatic lock after at most 300 seconds in required employee profiles; test a representative domain desktop session.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 32,
+      "category": "OS Settings",
+      "points": 2,
+      "planted_state": "/tmp sticky bit missing",
+      "repair": "/tmp root-owned, mode 1777 and appropriate SELinux label; temp-file operations still work.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "not-yet-staged-or-rehearsed"
+    },
+    {
+      "id": 33,
+      "category": "OS Settings",
+      "points": 2,
+      "planted_state": "Scenario shell initialization file ordinary-user writable",
+      "repair": "/etc/profile.d/summit-workstation.sh root-owned and non-writable by ordinary users, including ACLs; keep its legitimate harmless content.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 34,
+      "category": "Unwanted Software",
+      "points": 2,
+      "planted_state": "Unauthorized offline game installed",
+      "repair": "Scenario game application, launchers and installed manifest absent. Use a simple bundled game, not a new external software repository.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 35,
+      "category": "Unwanted Software",
+      "points": 2,
+      "planted_state": "Cockpit web administration installed despite employee-workstation policy",
+      "repair": "Remove cockpit-ws and its web activation; preserve required SSH and business access",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 36,
+      "category": "Unwanted Software",
+      "points": 2,
+      "planted_state": "Nmap installed despite workstation policy",
+      "repair": "Nmap application removed; README explicitly prohibits it on this employee endpoint. Scanning tools remain legitimate on separately authorized lab hosts.",
+      "implementation_status": "live-engine-validated",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 37,
+      "category": "User Auditing",
+      "points": 2,
+      "planted_state": "Undocumented local interactive account enabled",
+      "repair": "Planted account cannot authenticate by password, key, or desktop; remove it or disable all interactive access. Password lock alone is insufficient.",
+      "implementation_status": "live-engine-validated",
+      "target_local_account": "summit-unknown",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 38,
+      "category": "User Auditing",
+      "points": 2,
+      "planted_state": "Departed local employee retains access",
+      "repair": "Disable all interactive access while preserving its account and retained business data. Use a new local scenario identity, not a CORP domain account.",
+      "implementation_status": "live-engine-validated",
+      "target_local_account": "summit-departed",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 39,
+      "category": "User Auditing",
+      "points": 2,
+      "planted_state": "Ordinary employee in wheel",
+      "repair": "Planted employee absent from wheel and has no equivalent effective administrative grants. Preserve jwang.",
+      "implementation_status": "live-engine-validated",
+      "target_local_account": "summit-employee",
+      "scenario_status": "planted-and-repair-rehearsed"
+    },
+    {
+      "id": 40,
+      "category": "User Auditing",
+      "points": 2,
+      "planted_state": "Separate unauthorized sudoers grant",
+      "repair": "Target identity has no effective sudo authorization through direct rules, aliases, included files, or group grants.",
+      "implementation_status": "live-engine-validated",
+      "target_local_account": "summit-auditor",
+      "scenario_status": "planted-and-repair-rehearsed"
+    }
+  ],
+  "required_recovery_account": "jwang",
+  "domain": "corp.summit.test",
+  "synthetic_ca_sha256": "27a1a39bd003d5fc0494e82066570ef74206d4da486c39d946faaba239ba5ebe",
+  "artifact_hashes": {
+    "app.conf": "468f5b7591c7e8912ba6a94cd403b609ff3b19a3f23ec0a1d7d3f2f6c0f8d918",
+    "cron-marker.sh": "f06f1cff16f9fdca211a8930cb1f436f6eb24ebe419200edb30172f2ae478f22",
+    "fictional-credentials.txt": "REPLACE_AT_DEPLOYMENT",
+    "Forensics.txt": "ed98b0180d96a0c4965043a9c5c3f194f95284b94e05614bba0b0312ac19c90e",
+    "offline-game.py": "bbc546704b5247faaa087f8777cffa94880985f278cd629810e3d1f24a8f0616",
+    "personal-media.zip": "9162283632d30f1d47ead5c9aa45f3a52fa81928d12a3cf58d19d69d463400bf",
+    "summit-marker.cron": "b3755f8e477de3331ab8f386f13d8f9b35b7da449af2e110c2fa8b09d92dcb54",
+    "summit-marker.service": "e31c555f02ce83ddf9f17b5c5b44ab81c33b741055ccc276051ab37327566f34",
+    "summit-marker.timer": "4b6af0b3d3f21df4e45bfa18c7c02746594724dd0bde2258fda498f93e755f1d",
+    "summit-offline-game.desktop": "abb2a9592b504478a0ed7506b5bc041268b8c83ac05e4190698060d0f3014773",
+    "summit-workstation.sh": "5d0c497e4b3a423a7fd59474c1eccf6a9631e430fd26b6a03af3f82516ccb691",
+    "systemd-marker.sh": "c89692591ab5f8bddf8bebc4db6c40a52ba9606e0092d909ed64b46d22a9f711",
+    "Forensic-Question-1.txt": "a5652fc37ed85db5b886d5613c8465dddcf70ffb9cb307e40d8be4b79a84ff32",
+    "Forensic-Question-2.txt": "6afdb48cfba68e3608861068ea47a3659e21ac7a3ec241b4a6a7fc886c056538",
+    "Forensic-Question-3.txt": "03d1552edeb7206d0722e7700bf617ba99f30bac455846f3b8c5629dd320097d"
+  },
+  "forensic_evidence_sha256": "c89692591ab5f8bddf8bebc4db6c40a52ba9606e0092d909ed64b46d22a9f711",
+  "competitor_domain_group": "linux-workstation-admins@corp.summit.test",
+  "competitor_fallback_account": "competitor-recovery",
+  "latest_validation": {
+    "score": 8,
+    "passing_issues": [
+      2,
+      16,
+      32
+    ],
+    "staged_security_issues": 28,
+    "forensic_questions": 3,
+    "production_competition_scorer_released": false
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "dc-disable",
+    "guest": "dc01",
+    "action": "business_disable",
+    "target": "dns",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

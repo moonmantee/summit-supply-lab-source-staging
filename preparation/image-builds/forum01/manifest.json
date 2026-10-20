@@ -1,0 +1,935 @@
+{
+  "machine": "FORUM01",
+  "os": "Windows Server 2022 Datacenter 10.0.20348 x64",
+  "domain": "corp.summit.test",
+  "scope": "forum01 only",
+  "snapshot": "Clean-Before-Competition-20261004",
+  "issues": 20,
+  "points": 100,
+  "expectedStart": 0,
+  "expectedSolution": 100,
+  "status": "runtime-verified",
+  "preserve": [
+    "IIS/phpBB forum",
+    "IIS FTP baseline fixture",
+    "SSH",
+    "domain identity",
+    "existing HTTP/FTP inject starting states",
+    "forum and FTP business content"
+  ],
+  "recovery": "prebuild-recovery.zip and scoped recovery entry point; clean VM snapshot",
+  "manualAcceptance": "pending",
+  "issueManifest": [
+    {
+      "id": "U01",
+      "category": "User Auditing",
+      "points": 5,
+      "repair": "Undocumented local interactive account disabled",
+      "probe": "native tri-state Probe.ps1 -Check U01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "U01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:37.0076796Z"
+        },
+        {
+          "id": "U01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:37.0234397Z"
+        },
+        {
+          "id": "U01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:37.0701574Z"
+        },
+        {
+          "id": "U01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:37.0858852Z"
+        }
+      ],
+      "target": "Local account old.contractor",
+      "planted_state": "Unauthorized synthetic interactive account enabled",
+      "observable_repair": "Disable or remove this scenario account, retaining approved accounts",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "U02",
+      "category": "User Auditing",
+      "points": 5,
+      "repair": "Authorized audit identity has standard privileges",
+      "probe": "native tri-state Probe.ps1 -Check U02",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "U02",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:37.2419795Z"
+        },
+        {
+          "id": "U02",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:37.2729934Z"
+        },
+        {
+          "id": "U02",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:37.3047455Z"
+        },
+        {
+          "id": "U02",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:37.3201488Z"
+        }
+      ],
+      "target": "Local Administrators group and retained forum.audit SID",
+      "planted_state": "Authorized standard audit identity is an administrator",
+      "observable_repair": "Remove its administrator membership; retain enabled original SID",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "I01",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "IIS directory browsing disabled",
+      "probe": "native tri-state Probe.ps1 -Check I01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "I01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:38.6168451Z"
+        },
+        {
+          "id": "I01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:39.6952221Z"
+        },
+        {
+          "id": "I01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:40.7263294Z"
+        },
+        {
+          "id": "I01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:41.8051891Z"
+        }
+      ],
+      "target": "Default Web Site directoryBrowse.enabled",
+      "planted_state": "Directory browsing enabled",
+      "observable_repair": "Disable effective directory browsing",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "I02",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "IIS custom error responses enabled",
+      "probe": "native tri-state Probe.ps1 -Check I02",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "I02",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:43.0404297Z"
+        },
+        {
+          "id": "I02",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:44.101441Z"
+        },
+        {
+          "id": "I02",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:45.1636444Z"
+        },
+        {
+          "id": "I02",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:46.2263381Z"
+        }
+      ],
+      "target": "Default Web Site httpErrors.errorMode",
+      "planted_state": "Detailed IIS errors enabled",
+      "observable_repair": "Set effective errorMode to Custom",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "P01",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "PHP version disclosure disabled",
+      "probe": "native tri-state Probe.ps1 -Check P01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "P01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:46.929634Z"
+        },
+        {
+          "id": "P01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:47.7887406Z"
+        },
+        {
+          "id": "P01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:48.8045238Z"
+        },
+        {
+          "id": "P01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:49.7889427Z"
+        }
+      ],
+      "target": "C:\\PHP\\php.ini expose_php",
+      "planted_state": "PHP version disclosure enabled",
+      "observable_repair": "Set effective expose_php Off without losing PHP serving executable",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "P02",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "PHP displayed errors disabled",
+      "probe": "native tri-state Probe.ps1 -Check P02",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "P02",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:51.1481265Z"
+        },
+        {
+          "id": "P02",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:52.0237316Z"
+        },
+        {
+          "id": "P02",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:53.0081749Z"
+        },
+        {
+          "id": "P02",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:53.4293075Z"
+        }
+      ],
+      "target": "C:\\PHP\\php.ini display_errors",
+      "planted_state": "PHP errors displayed to clients",
+      "observable_repair": "Set effective display_errors Off",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "P03",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "PHP error logging enabled",
+      "probe": "native tri-state Probe.ps1 -Check P03",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "P03",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:54.1795435Z"
+        },
+        {
+          "id": "P03",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:54.5699775Z"
+        },
+        {
+          "id": "P03",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:54.9450013Z"
+        },
+        {
+          "id": "P03",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:55.351378Z"
+        }
+      ],
+      "target": "C:\\PHP\\php.ini log_errors",
+      "planted_state": "PHP error logging disabled",
+      "observable_repair": "Set effective log_errors On",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "P04",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "PHP URL inclusion disabled",
+      "probe": "native tri-state Probe.ps1 -Check P04",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "P04",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:56.0698197Z"
+        },
+        {
+          "id": "P04",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:56.3356839Z"
+        },
+        {
+          "id": "P04",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:56.7885864Z"
+        },
+        {
+          "id": "P04",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T21:59:57.1324211Z"
+        }
+      ],
+      "target": "C:\\PHP\\php.ini allow_url_include",
+      "planted_state": "URL inclusion enabled",
+      "observable_repair": "Set effective allow_url_include Off",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "P05",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "PHP session cookies use HttpOnly",
+      "probe": "native tri-state Probe.ps1 -Check P05",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "P05",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T21:59:58.2730761Z"
+        },
+        {
+          "id": "P05",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:00.1164773Z"
+        },
+        {
+          "id": "P05",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:01.2729185Z"
+        },
+        {
+          "id": "P05",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:01.9133518Z"
+        }
+      ],
+      "target": "C:\\PHP\\php.ini session.cookie_httponly",
+      "planted_state": "HttpOnly session-cookie protection disabled",
+      "observable_repair": "Set effective session.cookie_httponly On",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "A01",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "Forum configuration has protected permissions",
+      "probe": "native tri-state Probe.ps1 -Check A01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "A01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:02.5074044Z"
+        },
+        {
+          "id": "A01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:02.5851952Z"
+        },
+        {
+          "id": "A01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:02.6166718Z"
+        },
+        {
+          "id": "A01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:02.6636564Z"
+        }
+      ],
+      "target": "C:\\inetpub\\wwwroot\\config.php NTFS permissions",
+      "planted_state": "Ordinary Users have Modify permission on unchanged forum configuration",
+      "observable_repair": "Remove unauthorized write grants and read denials; retain Users and IIS reading and unchanged configuration",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "I03",
+      "category": "Local Policy",
+      "points": 5,
+      "repair": "IIS web logging enabled",
+      "probe": "native tri-state Probe.ps1 -Check I03",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "I03",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:03.0385976Z"
+        },
+        {
+          "id": "I03",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:03.1325325Z"
+        },
+        {
+          "id": "I03",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:03.2106259Z"
+        },
+        {
+          "id": "I03",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:03.2887175Z"
+        }
+      ],
+      "target": "Default Web Site logFile.enabled",
+      "planted_state": "Web logging disabled",
+      "observable_repair": "Enable effective web-site logging",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "I04",
+      "category": "Local Policy",
+      "points": 5,
+      "repair": "IIS FTP logging enabled",
+      "probe": "native tri-state Probe.ps1 -Check I04",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "I04",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:04.023618Z"
+        },
+        {
+          "id": "I04",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:04.663835Z"
+        },
+        {
+          "id": "I04",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:05.2570579Z"
+        },
+        {
+          "id": "I04",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:05.9135691Z"
+        }
+      ],
+      "target": "Summit Baseline FTP ftpServer.logFile.enabled",
+      "planted_state": "FTP logging disabled",
+      "observable_repair": "Enable effective FTP-site logging",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "W01",
+      "category": "Application Security",
+      "points": 5,
+      "repair": "RDP Network Level Authentication required",
+      "probe": "native tri-state Probe.ps1 -Check W01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "W01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:06.1010324Z"
+        },
+        {
+          "id": "W01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:06.1321068Z"
+        },
+        {
+          "id": "W01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:06.1791881Z"
+        },
+        {
+          "id": "W01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:06.2417711Z"
+        }
+      ],
+      "target": "RDP-Tcp UserAuthentication",
+      "planted_state": "RDP Network Level Authentication disabled",
+      "observable_repair": "Enable NLA while retaining administration access",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "S01",
+      "category": "Service Auditing",
+      "points": 5,
+      "repair": "Unneeded Remote Registry service disabled",
+      "probe": "native tri-state Probe.ps1 -Check S01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "S01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:07.4605468Z"
+        },
+        {
+          "id": "S01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:08.0696773Z"
+        },
+        {
+          "id": "S01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:08.5074016Z"
+        },
+        {
+          "id": "S01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:09.0387337Z"
+        }
+      ],
+      "target": "RemoteRegistry service startup and runtime",
+      "planted_state": "Unneeded Remote Registry starts automatically and runs",
+      "observable_repair": "Stop service and set Disabled startup",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "M01",
+      "category": "Malware",
+      "points": 5,
+      "repair": "Unauthorized inert persistence remediated",
+      "probe": "native tri-state Probe.ps1 -Check M01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "M01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:11.3351935Z"
+        },
+        {
+          "id": "M01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:12.2102651Z"
+        },
+        {
+          "id": "M01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:14.4135063Z"
+        },
+        {
+          "id": "M01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.1479677Z"
+        }
+      ],
+      "target": "\\SummitScenario\\PartnerCacheSync and scenario payload",
+      "planted_state": "LOCAL SERVICE task and inert local marker payload installed",
+      "observable_repair": "Disable/remove matching activation and remove the payload; retained evidence survives",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "F01",
+      "category": "Prohibited Files",
+      "points": 5,
+      "repair": "Fictional plaintext credentials removed",
+      "probe": "native tri-state Probe.ps1 -Check F01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "F01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.3352677Z"
+        },
+        {
+          "id": "F01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.366584Z"
+        },
+        {
+          "id": "F01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.3820618Z"
+        },
+        {
+          "id": "F01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.4131428Z"
+        }
+      ],
+      "target": "C:\\Users\\Public\\Documents\\SummitPartner recursive scope",
+      "planted_state": "Synthetic fictional credential document present",
+      "observable_repair": "Remove original and renamed copies; retain partner-business.txt",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "F02",
+      "category": "Prohibited Files",
+      "points": 5,
+      "repair": "Unauthorized personal archive removed",
+      "probe": "native tri-state Probe.ps1 -Check F02",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "F02",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.5225994Z"
+        },
+        {
+          "id": "F02",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.5697545Z"
+        },
+        {
+          "id": "F02",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.6166923Z"
+        },
+        {
+          "id": "F02",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.6635116Z"
+        }
+      ],
+      "target": "C:\\Users\\Public\\Documents\\SummitPartner recursive scope",
+      "planted_state": "Synthetic personal-media archive present",
+      "observable_repair": "Remove original and renamed copies; retain business documents",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "Q01",
+      "category": "Forensics Questions",
+      "points": 5,
+      "repair": "Forensic question 1 answered",
+      "probe": "native tri-state Probe.ps1 -Check Q01",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "Q01",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.8509583Z"
+        },
+        {
+          "id": "Q01",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.8667754Z"
+        },
+        {
+          "id": "Q01",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:15.8975873Z"
+        },
+        {
+          "id": "Q01",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:15.9132072Z"
+        }
+      ],
+      "target": "Separate public Forensic Question 1.txt",
+      "planted_state": "Blank account-attribution answer",
+      "observable_repair": "Save evidence-supported account in its own Answer section",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "Q02",
+      "category": "Forensics Questions",
+      "points": 5,
+      "repair": "Forensic question 2 answered",
+      "probe": "native tri-state Probe.ps1 -Check Q02",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "Q02",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:16.0384111Z"
+        },
+        {
+          "id": "Q02",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:16.0384111Z"
+        },
+        {
+          "id": "Q02",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:16.069438Z"
+        },
+        {
+          "id": "Q02",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:16.0850389Z"
+        }
+      ],
+      "target": "Separate public Forensic Question 2.txt",
+      "planted_state": "Blank persistence-mechanism answer",
+      "observable_repair": "Save evidence-supported full task path in its own Answer section",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    },
+    {
+      "id": "Q03",
+      "category": "Forensics Questions",
+      "points": 5,
+      "repair": "Forensic question 3 answered",
+      "probe": "native tri-state Probe.ps1 -Check Q03",
+      "dependencies": [
+        "Required native component available",
+        "Original business configuration present"
+      ],
+      "preservation": "README required services, data and approved identities",
+      "recovery": "Restore owned setting from original.json or remove only build-owned resource",
+      "status": "runtime-verified",
+      "evidence": [
+        {
+          "id": "Q03",
+          "state": "protected",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:16.21034Z"
+        },
+        {
+          "id": "Q03",
+          "state": "planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:16.226014Z"
+        },
+        {
+          "id": "Q03",
+          "state": "repaired",
+          "verdict": "PASS",
+          "utc": "2026-10-04T22:00:16.2569415Z"
+        },
+        {
+          "id": "Q03",
+          "state": "final-planted",
+          "verdict": "FAIL",
+          "utc": "2026-10-04T22:00:16.288672Z"
+        }
+      ],
+      "target": "Separate public Forensic Question 3.txt",
+      "planted_state": "Blank payload-hash answer",
+      "observable_repair": "Save retained payload SHA-256 in its own Answer section",
+      "policy_justification": "Explicit forum01 participant README policy",
+      "staging_status": "planted"
+    }
+  ],
+  "automatedScoring": "verified: encrypted runtime running automatically with fresh continuing 0/100 reports; approved exact-file Defender exception",
+  "configurationSha256": "C28818C0159A2393DE42BAA5616E07C6402A3DD83219BA062055C00F5794233A",
+  "probeSha256": "950AE8CE62D64C63EAB0BC5BD59413D4F91725E53236AFF12C5AEF8D3F5EE8ED",
+  "organizerCredentialExport": "private/INITIAL-CREDENTIALS.txt; protected Administrators/SYSTEM/organizer ACL",
+  "realEngineScoreProof": [
+    0,
+    100,
+    0
+  ],
+  "organizerArchiveSha256": "9870B5CC569D0DE2B631810453B01C9304519692B7E018232DF8BA1413E07937",
+  "guestBuildMaterial": "removed after externally archived and hash-verified"
+}

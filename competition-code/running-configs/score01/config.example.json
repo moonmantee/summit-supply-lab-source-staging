@@ -1,0 +1,181 @@
+{
+  "forum_web_mode": "http",
+  "max_workers": 8,
+  "services": [
+    {
+      "id": "dc01-dns",
+      "host_name": "dc01",
+      "service_name": "DNS",
+      "probe": "dns",
+      "server": "10.77.40.10",
+      "query": "dc01.corp.summit.test",
+      "expected_address": "10.77.40.10",
+      "points": 5,
+      "sla_penalty": 15
+    },
+    {
+      "id": "dc01-ssh",
+      "host_name": "dc01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.40.10",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    },
+    {
+      "id": "workstation01-ssh",
+      "host_name": "workstation01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.20.10",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    },
+    {
+      "id": "shop01-https",
+      "host_name": "shop01",
+      "service_name": "HTTPS storefront",
+      "probe": "https",
+      "url": "https://10.77.30.10/",
+      "ca_file": "/home/jwang/summit-scoring/summit-shop01.crt",
+      "expected": [
+        "SUM-101",
+        "SUM-102",
+        "SUM-103",
+        "Ridgeline daypack",
+        "Alpine insulated bottle",
+        "Trail first aid kit",
+        "$50.00",
+        "$24.00",
+        "$18.00"
+      ],
+      "points": 5,
+      "sla_penalty": 15
+    },
+    {
+      "id": "shop01-ssh",
+      "host_name": "shop01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.30.10",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    },
+    {
+      "id": "sql01-ssh",
+      "host_name": "sql01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.50.20",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    },
+    {
+      "id": "forum01-web",
+      "host_name": "forum01",
+      "service_name": "Web forum",
+      "variants": {
+        "http": {
+          "probe": "http",
+          "url": "http://10.77.30.20/",
+          "expected_status": [
+            200
+          ],
+          "points": 3,
+          "sla_penalty": 10
+        },
+        "https": {
+          "probe": "https",
+          "url": "https://10.77.30.20/",
+          "verify_tls": false,
+          "expected_status": [
+            200
+          ],
+          "points": 5,
+          "sla_penalty": 15
+        }
+      }
+    },
+    {
+      "id": "forum01-ftp",
+      "host_name": "forum01",
+      "service_name": "FTP",
+      "probe": "banner",
+      "host": "10.77.30.20",
+      "port": 21,
+      "banner_prefix": "220",
+      "points": 2,
+      "sla_penalty": 7
+    },
+    {
+      "id": "forum01-ssh",
+      "host_name": "forum01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.30.20",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    },
+    {
+      "id": "mail01-smtp",
+      "host_name": "mail01",
+      "service_name": "SMTP",
+      "probe": "smtp",
+      "host": "10.77.30.30",
+      "port": 25,
+      "points": 4,
+      "sla_penalty": 12
+    },
+    {
+      "id": "mail01-imaps",
+      "host_name": "mail01",
+      "service_name": "IMAP (143)",
+      "probe": "banner",
+      "host": "10.77.30.30",
+      "port": 143,
+      "points": 4,
+      "sla_penalty": 12,
+      "banner_prefix": "* OK"
+    },
+    {
+      "id": "mail01-https",
+      "host_name": "mail01",
+      "service_name": "HTTPS webmail",
+      "probe": "https",
+      "url": "https://webmail.corp.summit.test/Mondo/lang/sys/login.aspx",
+      "verify_tls": true,
+      "expected_status": [
+        200
+      ],
+      "points": 5,
+      "sla_penalty": 15,
+      "connect_host": "10.77.30.30",
+      "ca_file": "/home/jwang/summit-scoring/mail01-webmail-trust.pem",
+      "expected": [
+        "MailEnable"
+      ]
+    },
+    {
+      "id": "mail01-ssh",
+      "host_name": "mail01",
+      "service_name": "SSH",
+      "probe": "banner",
+      "host": "10.77.30.30",
+      "port": 22,
+      "banner_prefix": "SSH-",
+      "points": 1,
+      "sla_penalty": 5
+    }
+  ],
+  "portal_database": "/home/jwang/summit-portal/portal-state/portal.sqlite3"
+}

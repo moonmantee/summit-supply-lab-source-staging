@@ -1,0 +1,10 @@
+[
+  {
+    "id": "mail-popup",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 3,
+    "window": 15
+  }
+]

@@ -1,0 +1,29 @@
+{
+    "threatName":  "Trojan:Win64/Wingo!MTB",
+    "runtimePath":  "C:\\aeacus\\phocus.exe",
+    "runtimeSha256":  "BF266B0E2BFCCB6AA871D61D2D9584ACBB2B11D19D5598E4435C78294A57DD4A",
+    "detections":  [
+                       {
+                           "ThreatID":  2147829936,
+                           "ActionSuccess":  true,
+                           "Resources":  [
+                                             "file:_C:\\aeacus\\phocus.exe"
+                                         ],
+                           "ThreatStatusID":  3
+                       },
+                       {
+                           "ThreatID":  2147829936,
+                           "ActionSuccess":  true,
+                           "Resources":  [
+                                             "file:_C:\\aeacus\\phocus.exe",
+                                             "process:_pid:5904,ProcessStart:134356249469147725",
+                                             "service:_CSSClient"
+                                         ],
+                           "ThreatStatusID":  3
+                       }
+                   ],
+    "protection":  {
+                       "AntivirusEnabled":  true,
+                       "RealTimeProtectionEnabled":  true
+                   }
+}

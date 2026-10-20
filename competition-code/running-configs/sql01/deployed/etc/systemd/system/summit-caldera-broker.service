@@ -1,0 +1,23 @@
+[Unit]
+Description=Visible fixed-event SQL CALDERA broker
+After=network-online.target
+Wants=network-online.target
+[Service]
+User=root
+Group=summit-caldera-agent
+ExecStart=/usr/bin/python3 /opt/summit-caldera-fixtures/sql_broker.py --config /etc/summit-caldera-fixtures/broker/config.json
+Restart=no
+RuntimeDirectory=summit-caldera-broker
+RuntimeDirectoryMode=0750
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+ReadWritePaths=/var/lib/summit-caldera-business /var/lib/summit-caldera-notices
+RestrictAddressFamilies=AF_INET AF_UNIX
+UMask=0077
+MemoryMax=64M
+CPUQuota=10%
+TasksMax=24
+[Install]
+WantedBy=multi-user.target

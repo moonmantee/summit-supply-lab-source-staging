@@ -1,0 +1,9 @@
+{
+  "status": "runtime-verified",
+  "points": 0,
+  "total": 100,
+  "checks": 30,
+  "recovery": "/var/backups/summit-sql01-competition-3p8p1mwe",
+  "manual_acceptance": "PENDING",
+  "export": "PENDING"
+}

@@ -1,0 +1,9 @@
+Forensic Question 1 — Persistence creator
+
+Review the synthetic incident evidence in:
+  /opt/summit-evidence/scenario-events.txt
+
+Which account created the suspicious systemd persistence?
+Enter only the account name after the equals sign below, then save this file.
+
+Answer =

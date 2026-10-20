@@ -1,0 +1,5 @@
+[Unit]
+Description=SUMMIT-TRAINING-SYSTEMD-MARKER
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/summit-training/systemd-marker.sh

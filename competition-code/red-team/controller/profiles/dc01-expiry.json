@@ -1,0 +1,10 @@
+[
+  {
+    "id": "dc-expire",
+    "guest": "dc01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 15,
+    "window": 8
+  }
+]

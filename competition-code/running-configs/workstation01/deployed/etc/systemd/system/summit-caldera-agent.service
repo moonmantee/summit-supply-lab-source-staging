@@ -1,0 +1,19 @@
+[Unit]
+Description=Visible Summit CCDC workstation fixed-popup contact
+After=network-online.target gdm.service
+Wants=network-online.target
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 -I /opt/summit-caldera-workstation/workstation_agent.py
+Restart=no
+UMask=0077
+NoNewPrivileges=true
+CapabilityBoundingSet=CAP_SETUID CAP_SETGID CAP_DAC_READ_SEARCH
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/summit-caldera-workstation /var/lib/summit-caldera-notice /run/user/1000
+RestrictAddressFamilies=AF_INET AF_UNIX
+KillMode=control-group
+[Install]
+WantedBy=multi-user.target

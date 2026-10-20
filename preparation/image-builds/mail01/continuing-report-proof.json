@@ -1,0 +1,8 @@
+{
+    "machine":  "MAIL01",
+    "baselineReportUtc":  "2026-10-05T00:04:59.0321562Z",
+    "newerReportUtc":  "2026-10-05T00:06:49.6421184Z",
+    "complete":  true,
+    "points":  0,
+    "service":  "Running"
+}

@@ -1,0 +1,32 @@
+[Unit]
+Description=Summit CALDERA fixed-fixture coordinator (initially disarmed)
+After=network-online.target summit-caldera.service summit-caldera-contact.service summit-caldera-scoring-export.service
+BindsTo=summit-caldera.service summit-caldera-contact.service
+PartOf=summit-caldera.service summit-caldera-contact.service
+Wants=network-online.target summit-caldera-scoring-export.timer
+[Service]
+User=summit-coordinator
+Group=summit-caldera
+SupplementaryGroups=summit-coordinator
+RuntimeDirectory=summit-caldera-admin
+RuntimeDirectoryMode=0750
+ExecStart=/usr/bin/python3 /opt/summit-caldera-fixtures/fixture_coordinator.py --config /etc/summit-caldera-fixtures/runtime/config.json serve
+Restart=no
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_UNIX
+CapabilityBoundingSet=
+ReadWritePaths=/var/lib/summit-caldera-fixtures /run/summit-caldera-admin
+UMask=0077
+MemoryMax=96M
+CPUQuota=25%
+TasksMax=40
+[Install]
+WantedBy=multi-user.target

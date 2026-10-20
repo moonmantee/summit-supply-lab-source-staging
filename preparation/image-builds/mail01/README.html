@@ -1,0 +1,25 @@
+﻿<!doctype html><html><head><meta charset='utf-8'><title>Summit MAIL01 Competition</title><style>body{max-width:900px;margin:40px auto;font:18px/1.6 Arial;padding:20px}h1,h2{color:#174166}</style></head><body><h1>Summit Supply MAIL01</h1><p>Windows Server 2022 / MailEnable 10.59 / corp.summit.test. 25 security controls (88 points) plus 3 forensic questions (12 points), 100 points. Preserve existing mailboxes, mail delivery, authorized authentication, webmail, domain trust and existing organizer access.</p><p>Authorized added local identities: mail.fallback (administrator) and mail.audit (standard). Existing labadmin remains authorized. Do not remove IME_ADMIN or IME_USER service identities. Organizer provides generated event passwords privately.</p><p>Maintain deployed SMTP 25/587, IMAP 143, POP 110, HTTPS webmail 443, required Windows domain services and organizer SSH 22. Port 993 was absent before this build; do not claim it is an established service. Preserve firewall profiles and existing certificates. Windows native certificate trust was failing before the build.</p><h2>Security policy</h2><ul><li>Only Administrator, labadmin, mail.fallback, mail.audit, the existing domain administration group and existing MailEnable service identities are authorized. Disable undocumented interactive identities.</li>
+<li>mail.audit is an authorized standard employee. It must remain enabled without local administrator privileges.</li>
+<li>SSH must reject empty passwords. Preserve organizer keys and password-capable authorized access.</li>
+<li>SSH forwarding of TCP, agent and streamlocal connections is prohibited on MAIL01.</li>
+<li>SSH LoginGraceTime must be between 1 and 60 seconds.</li>
+<li>Disable IIS directory browsing for MailEnable WebMail.</li>
+<li>Remote webmail clients must receive Custom or DetailedLocalOnly IIS errors.</li>
+<li>HTTP TRACE requests must be denied by effective IIS request filtering.</li>
+<li>Webmail maxAllowedContentLength must be between 30000000 and 50000000 bytes; ordinary mail attachments must remain usable.</li>
+<li>Enable successful process creation auditing.</li>
+<li>Enable successful local user account management auditing.</li>
+<li>Enable failed logon auditing.</li>
+<li>Configure a nonempty interactive logon caption and notice.</li>
+<li>Machine inactivity limit must be 60 through 900 seconds.</li>
+<li>Do not allow anonymous enumeration of SAM accounts.</li>
+<li>Ordinary users may read operations.ps1 in the scenario directory but must not modify it.</li>
+<li>Ordinary users may read the scenario Maintenance directory but must not create or modify executable content there.</li>
+<li>Only local Administrators and SYSTEM may read scenario confidential.txt. Preserve its contents.</li>
+<li>Ordinary users may read the scenario test_authorized_keys fixture but must not modify it. It is inert and is not an organizer access key.</li>
+<li>The inert MailboxCacheSync scheduled task is unauthorized. Disable or remove its activation. Preserve ordinary MailEnable jobs.</li>
+<li>The inert SummitMailLegacy machine startup entry is unauthorized. Remove its activation.</li>
+<li>The SummitMail-UnnecessaryIngress allow rule is unauthorized. Disable or remove it. Keep all three firewall profiles enabled and retain required business rules.</li>
+<li>Automatic Windows updates must not be disabled by policy; the Windows Update service must remain installed and must not have Disabled startup. Applying an actual update is separate acceptance work.</li>
+<li>Remove fictional plaintext training credentials from Operations, including renamed copies. Preserve operations-business.txt.</li>
+<li>Remove the synthetic personal media archive from Operations, including renamed copies. Preserve business files.</li></ul><p>Scenario fixture directory: C:\ProgramData\SummitMailScenario. Prohibited-content search scope: C:\Users\Public\Documents\SummitMailCompetition\Operations. Inert payloads are harmless training artifacts. Do not delete business fixtures to satisfy permission checks. Three separately scored forensic questions are included. Use their individual Public Desktop shortcuts; write only beneath Answer: and save. Answers are case insensitive and surrounding whitespace is ignored. Preserved evidence remains in Forensic Evidence even after live vulnerabilities are repaired.</p><h2>Scoring and recovery</h2><p>Use the Public Desktop report link, or open C:\aeacus\assets\ScoringReport.html. Refresh to read current results. Do not tamper with the scorer. Contact the organizer for console recovery; do not revert snapshots during competition.</p></body></html>

@@ -1,0 +1,44 @@
+[
+    {
+        "identity":  "labadmin",
+        "question":  1,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    },
+    {
+        "identity":  "labadmin",
+        "question":  2,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    },
+    {
+        "identity":  "labadmin",
+        "question":  3,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    },
+    {
+        "identity":  "forum.audit",
+        "question":  1,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    },
+    {
+        "identity":  "forum.audit",
+        "question":  2,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    },
+    {
+        "identity":  "forum.audit",
+        "question":  3,
+        "readAndSave":  true,
+        "contentsPreserved":  true,
+        "blankAnswerVerdict":  "FAIL"
+    }
+]

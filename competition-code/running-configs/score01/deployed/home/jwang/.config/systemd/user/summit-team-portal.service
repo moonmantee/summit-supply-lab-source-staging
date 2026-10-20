@@ -1,0 +1,15 @@
+[Unit]
+Description=Summit Supply authenticated team portal
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jwang/summit-portal
+ExecStart=/usr/bin/python3 /home/jwang/summit-portal/portal_server.py serve --scoring /home/jwang/summit-scoring/state/results.sqlite3 --config /home/jwang/summit-scoring/config.json
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077
+
+[Install]
+WantedBy=default.target

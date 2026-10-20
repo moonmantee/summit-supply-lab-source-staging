@@ -1,0 +1,1 @@
+[{"id": "mail-web-stop", "guest": "mail01", "action": "business_stop", "target": "web", "at": 3, "window": 15, "duration": 15}]

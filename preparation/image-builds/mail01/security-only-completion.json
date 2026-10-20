@@ -1,0 +1,25 @@
+{
+    "phase":  "runtime-verified",
+    "machine":  "MAIL01",
+    "root":  "C:\\ProgramData\\SummitLab\\MailCompetition-555018db66ec49fc888342aef49c224d",
+    "issues":  25,
+    "points":  100,
+    "startingScore":  0,
+    "solutionScore":  100,
+    "restoredScore":  0,
+    "freshEncryptedReport":  true,
+    "probeHash":  "04EAEB8EA5DA9BD6DF36B2C07B1E9979D455D5593213137223612426695FED95",
+    "configHash":  "5C968F1E206B21AE00FCA8DB77960DA066A0F847DA03FC820F37DBB95BD350CB",
+    "utc":  "2026-10-05T00:01:43.4425156Z",
+    "manualAcceptance":  "pending",
+    "export":  "not-performed",
+    "preservation":  {
+                         "services":  "running",
+                         "mailConfigHashes":  "unchanged",
+                         "domainTrust":  true,
+                         "webmailPinnedLeafStatus":  200,
+                         "nativeWindowsCertificateTrust":  "baseline failed",
+                         "realMailTransactions":  "pending",
+                         "existingAdminMembership":  "preserved"
+                     }
+}

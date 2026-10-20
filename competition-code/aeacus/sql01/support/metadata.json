@@ -1,0 +1,12 @@
+{
+  "backup_hash": "490de2f18fad1ff7d6af49e2935425de52e5b22cc6a5cc53f9381095e2e453b3",
+  "credential_marker": "REPLACE_AT_DEPLOYMENT",
+  "media_marker": "SUMMIT_UNAUTHORIZED_MEDIA_cfc666b29fcfb5010521a5fb",
+  "answers": {
+    "1": "training_vendor",
+    "2": "summit-sql01-marker.timer",
+    "3": "0fe131621b2bef0a57b523d4f844ed04ceecad6f0bb7ee084eb112f1c7e73b9d"
+  },
+  "payload": "from pathlib import Path\nPath('/var/lib/summit-sql01-marker/observed.txt').write_text('Harmless SQL01 competition marker; no network or business access.\\n')\n",
+  "profile_hash": "f7d5aeedd4ecdc84212fdad9bd4419338e013f727e6bf134c10bd07af721b28b"
+}

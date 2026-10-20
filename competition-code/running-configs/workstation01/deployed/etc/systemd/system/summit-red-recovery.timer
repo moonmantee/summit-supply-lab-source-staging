@@ -1,0 +1,11 @@
+[Unit]
+Description=Independent deadline recovery for Summit demo outages
+
+[Timer]
+OnBootSec=2s
+OnUnitActiveSec=2s
+AccuracySec=1s
+Unit=summit-red-recovery.service
+
+[Install]
+WantedBy=timers.target

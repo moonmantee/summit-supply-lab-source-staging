@@ -1,0 +1,142 @@
+{
+    "questions":  [
+                      {
+                          "probe":  "Forensic.ps1 -Check Q01",
+                          "id":  "Q01",
+                          "repair":  "Save the correct answer in Forensic Question 1.txt",
+                          "question":  "Which account changed the maintenance-script permissions in the preserved incident record?",
+                          "category":  "Forensics Questions",
+                          "preservation":  "Existing mail service/data, domain trust and access",
+                          "status":  "runtime-verified",
+                          "target":  "MAIL01",
+                          "evidence":  [
+                                           {
+                                               "sha256":  "AD0B19AF98A6409A689CE9ACF475AA16F2C167F8E585FA708D79BC6F4032C7FF",
+                                               "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\incident-audit.txt"
+                                           }
+                                       ],
+                          "evidenceRehearsals":  [
+                                                     {
+                                                         "id":  "Q01",
+                                                         "state":  "blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.2370731Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q01",
+                                                         "state":  "wrong",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.2683898Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q01",
+                                                         "state":  "correct",
+                                                         "verdict":  "PASS",
+                                                         "utc":  "2026-10-05T00:24:56.2993118Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q01",
+                                                         "state":  "final-blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.2993118Z"
+                                                     }
+                                                 ],
+                          "points":  4,
+                          "answerHash":  "f549900b973ac8dcae1ecd970b6dabb83f29cb763aa755a753a3fb4eb9c6f951",
+                          "dependencies":  "Retained evidence and scorer",
+                          "recovery":  "Restore the blank question template"
+                      },
+                      {
+                          "probe":  "Forensic.ps1 -Check Q02",
+                          "id":  "Q02",
+                          "repair":  "Save the correct answer in Forensic Question 2.txt",
+                          "question":  "What is the full scheduled-task path used for the unauthorized activation shown in the retained evidence?",
+                          "category":  "Forensics Questions",
+                          "preservation":  "Existing mail service/data, domain trust and access",
+                          "status":  "runtime-verified",
+                          "target":  "MAIL01",
+                          "evidence":  [
+                                           {
+                                               "sha256":  "A6431A0AAE59EBFE2D5D421F2F1E01C9493F6828312A474E73C12DA083CC5037",
+                                               "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\retained-task.xml"
+                                           }
+                                       ],
+                          "evidenceRehearsals":  [
+                                                     {
+                                                         "id":  "Q02",
+                                                         "state":  "blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.3152179Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q02",
+                                                         "state":  "wrong",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.3619332Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q02",
+                                                         "state":  "correct",
+                                                         "verdict":  "PASS",
+                                                         "utc":  "2026-10-05T00:24:56.5495720Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q02",
+                                                         "state":  "final-blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.5648360Z"
+                                                     }
+                                                 ],
+                          "points":  4,
+                          "answerHash":  "c1fb541afaa8071f8e5e734f56b7fe28a4b0812aa8b90aed112609fbd3526085",
+                          "dependencies":  "Retained evidence and scorer",
+                          "recovery":  "Restore the blank question template"
+                      },
+                      {
+                          "probe":  "Forensic.ps1 -Check Q03",
+                          "id":  "Q03",
+                          "repair":  "Save the correct answer in Forensic Question 3.txt",
+                          "question":  "What is the SHA-256 hash of the retained payload file?",
+                          "category":  "Forensics Questions",
+                          "preservation":  "Existing mail service/data, domain trust and access",
+                          "status":  "runtime-verified",
+                          "target":  "MAIL01",
+                          "evidence":  [
+                                           {
+                                               "sha256":  "F3EBAEA354D683B6EF8E767CBF8B72100B4F5ABD1048426F612B43C48020607B",
+                                               "path":  "C:\\Users\\Public\\Documents\\SummitMailCompetition\\Forensic Evidence\\retained-payload.txt"
+                                           }
+                                       ],
+                          "evidenceRehearsals":  [
+                                                     {
+                                                         "id":  "Q03",
+                                                         "state":  "blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:56.5804100Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q03",
+                                                         "state":  "wrong",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:57.0197632Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q03",
+                                                         "state":  "correct",
+                                                         "verdict":  "PASS",
+                                                         "utc":  "2026-10-05T00:24:57.0339530Z"
+                                                     },
+                                                     {
+                                                         "id":  "Q03",
+                                                         "state":  "final-blank",
+                                                         "verdict":  "FAIL",
+                                                         "utc":  "2026-10-05T00:24:57.0497312Z"
+                                                     }
+                                                 ],
+                          "points":  4,
+                          "answerHash":  "575e90b7886f9f9a68a9b1850db6e96959140e28196b6a68068d9412c2dbe90d",
+                          "dependencies":  "Retained evidence and scorer",
+                          "recovery":  "Restore the blank question template"
+                      }
+                  ]
+}

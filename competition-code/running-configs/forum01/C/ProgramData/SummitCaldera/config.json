@@ -1,0 +1,15 @@
+{
+    "contact":  {
+                    "endpoint":  "https://10.77.70.20:8771/beacon",
+                    "key":  "C:\\ProgramData\\SummitCaldera\\identity\\contact-client.key",
+                    "ca":  "C:\\ProgramData\\SummitCaldera\\identity\\ca.crt",
+                    "paw":  "summit-forum01",
+                    "certificate":  "C:\\ProgramData\\SummitCaldera\\identity\\contact-client.crt"
+                },
+    "authorization":  {
+                          "endpoint":  "https://10.77.70.20:8772",
+                          "key":  "C:\\ProgramData\\SummitCaldera\\identity\\authorization-client.key",
+                          "ca":  "C:\\ProgramData\\SummitCaldera\\identity\\ca.crt",
+                          "certificate":  "C:\\ProgramData\\SummitCaldera\\identity\\authorization-client.crt"
+                      }
+}

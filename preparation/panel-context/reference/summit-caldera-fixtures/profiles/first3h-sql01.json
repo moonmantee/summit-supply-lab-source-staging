@@ -1,0 +1,206 @@
+[
+  {
+    "id": "popup-0",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 0,
+    "window": 15
+  },
+  {
+    "id": "popup-5",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 300,
+    "window": 15
+  },
+  {
+    "id": "popup-10",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 600,
+    "window": 15
+  },
+  {
+    "id": "popup-15",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 900,
+    "window": 15
+  },
+  {
+    "id": "popup-20",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1200,
+    "window": 15
+  },
+  {
+    "id": "popup-25",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1500,
+    "window": 15
+  },
+  {
+    "id": "popup-30",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1800,
+    "window": 15
+  },
+  {
+    "id": "popup-35",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2100,
+    "window": 15
+  },
+  {
+    "id": "popup-40",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2400,
+    "window": 15
+  },
+  {
+    "id": "popup-45",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2700,
+    "window": 15
+  },
+  {
+    "id": "popup-50",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 3000,
+    "window": 15
+  },
+  {
+    "id": "popup-55",
+    "guest": "sql01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 3300,
+    "window": 15
+  },
+  {
+    "id": "stop-65",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 3900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "stop-75",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 4500,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "stop-85",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 5100,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "stop-95",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 5700,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "stop-105",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 6300,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "stop-115",
+    "guest": "sql01",
+    "action": "business_stop",
+    "target": "mariadb",
+    "at": 6900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-125",
+    "guest": "sql01",
+    "action": "business_disable",
+    "target": "mariadb",
+    "at": 7500,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-135",
+    "guest": "sql01",
+    "action": "business_restart_off",
+    "target": "mariadb",
+    "at": 8100,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-145",
+    "guest": "sql01",
+    "action": "business_disable",
+    "target": "mariadb",
+    "at": 8700,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-155",
+    "guest": "sql01",
+    "action": "business_restart_off",
+    "target": "mariadb",
+    "at": 9300,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-165",
+    "guest": "sql01",
+    "action": "business_disable",
+    "target": "mariadb",
+    "at": 9900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "policy-175",
+    "guest": "sql01",
+    "action": "business_restart_off",
+    "target": "mariadb",
+    "at": 10500,
+    "window": 15,
+    "duration": 180
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "id": "mail-popup-0",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 0,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-1",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 300,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-2",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 600,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-3",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 900,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-4",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1200,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-5",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1500,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-6",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 1800,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-7",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2100,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-8",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2400,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-9",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2700,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-10",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 3000,
+    "window": 15
+  },
+  {
+    "id": "mail-popup-11",
+    "guest": "mail01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 3300,
+    "window": 15
+  },
+  {
+    "id": "mail-stop-0",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "smtp",
+    "at": 3900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-stop-1",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "imap",
+    "at": 4500,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-stop-2",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "web",
+    "at": 5100,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-stop-3",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "smtp",
+    "at": 5700,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-stop-4",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "imap",
+    "at": 6300,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-stop-5",
+    "guest": "mail01",
+    "action": "business_stop",
+    "target": "web",
+    "at": 6900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-0",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "smtp",
+    "at": 7500,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-1",
+    "guest": "mail01",
+    "action": "business_restart_off",
+    "target": "imap",
+    "at": 8100,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-2",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "web",
+    "at": 8700,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-3",
+    "guest": "mail01",
+    "action": "business_restart_off",
+    "target": "smtp",
+    "at": 9300,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-4",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "imap",
+    "at": 9900,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "mail-policy-5",
+    "guest": "mail01",
+    "action": "business_disable",
+    "target": "web",
+    "at": 10500,
+    "window": 15,
+    "duration": 180
+  }
+]

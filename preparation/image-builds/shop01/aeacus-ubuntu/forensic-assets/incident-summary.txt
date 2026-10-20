@@ -1,0 +1,10 @@
+SYNTHETIC SHOP01 INCIDENT - FICTIONAL TRAINING EVIDENCE
+
+Approved automated web checks came from 10.77.70.10; an organizer request
+came from 10.77.10.50. The other client was unexpected. A successful HTTP
+200 backup retrieval exposed fictional internal notes, not customer data.
+The following unauthorized systemd activation used an inert local marker.
+No exploit, real compromise, credential theft, or remote callback occurred.
+
+Answer the three separate question documents using these preserved logs.
+Evidence is independent of live Apache logs and the retired marker artifacts.

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hour4-pilot-mail01-smtp",
+    "guest": "mail01",
+    "target": "smtp",
+    "action": "business_binary_rename",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

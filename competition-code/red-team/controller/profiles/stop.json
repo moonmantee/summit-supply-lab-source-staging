@@ -1,0 +1,11 @@
+[
+  {
+    "id": "stop-check",
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "at": 2,
+    "window": 15,
+    "duration": 5
+  }
+]

@@ -1,0 +1,28 @@
+GRANTEE	TABLE_SCHEMA	PRIVILEGE_TYPE
+'forum_app'@'10.77.30.20'	forum	SELECT
+'forum_app'@'10.77.30.20'	forum	INSERT
+'forum_app'@'10.77.30.20'	forum	UPDATE
+'forum_app'@'10.77.30.20'	forum	DELETE
+'forum_app'@'10.77.30.20'	forum	CREATE
+'forum_app'@'10.77.30.20'	forum	DROP
+'forum_app'@'10.77.30.20'	forum	REFERENCES
+'forum_app'@'10.77.30.20'	forum	INDEX
+'forum_app'@'10.77.30.20'	forum	ALTER
+'forum_app'@'10.77.30.20'	forum	CREATE TEMPORARY TABLES
+'forum_app'@'10.77.30.20'	forum	LOCK TABLES
+'forum_app'@'10.77.30.20'	forum	EXECUTE
+'forum_app'@'10.77.30.20'	forum	CREATE VIEW
+'forum_app'@'10.77.30.20'	forum	SHOW VIEW
+'forum_app'@'10.77.30.20'	forum	CREATE ROUTINE
+'forum_app'@'10.77.30.20'	forum	ALTER ROUTINE
+'forum_app'@'10.77.30.20'	forum	EVENT
+'forum_app'@'10.77.30.20'	forum	TRIGGER
+'forum_app'@'10.77.30.20'	forum	DELETE HISTORY
+'forum_app'@'10.77.30.20'	summit_shop	SELECT
+'shop_app'@'10.77.30.10'	summit_shop	SELECT
+'shop_app'@'10.77.30.10'	summit_shop	INSERT
+'shop_app'@'10.77.30.10'	summit_shop	UPDATE
+'shop_app'@'10.77.30.10'	summit_shop	DELETE
+GRANTEE	PRIVILEGE_TYPE
+'forum_app'@'10.77.30.20'	USAGE
+'shop_app'@'10.77.30.10'	FILE

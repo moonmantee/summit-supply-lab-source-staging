@@ -1,0 +1,4 @@
+SUMMIT-SHIPPING-POLICY-V1
+Orders ship within two business days.
+Standard shipping is available within the continental United States.
+For shipping questions, contact dispatch@corp.summit.test.

@@ -1,0 +1,3876 @@
+{
+  "version": [
+    "24.6"
+  ],
+  "interfaces": {
+    "wan": {
+      "enable": [],
+      "if": "em0",
+      "descr": [],
+      "blockbogons": [],
+      "ipaddr": "dhcp",
+      "dhcphostname": [],
+      "alias-address": [],
+      "alias-subnet": "32",
+      "dhcprejectfrom": [],
+      "adv_dhcp_pt_timeout": [],
+      "adv_dhcp_pt_retry": [],
+      "adv_dhcp_pt_select_timeout": [],
+      "adv_dhcp_pt_reboot": [],
+      "adv_dhcp_pt_backoff_cutoff": [],
+      "adv_dhcp_pt_initial_interval": [],
+      "adv_dhcp_pt_values": "SavedCfg",
+      "adv_dhcp_send_options": [],
+      "adv_dhcp_request_options": [],
+      "adv_dhcp_required_options": [],
+      "adv_dhcp_option_modifiers": [],
+      "adv_dhcp_config_advanced": [],
+      "adv_dhcp_config_file_override": [],
+      "adv_dhcp_config_file_override_path": [],
+      "ipaddrv6": "dhcp6",
+      "dhcp6-duid": [],
+      "dhcp6-ia-pd-len": "0",
+      "adv_dhcp6_prefix_selected_interface": "wan",
+      "spoofmac": [],
+      "subnet": [],
+      "gateway": [],
+      "subnetv6": [],
+      "gatewayv6": []
+    },
+    "lan": {
+      "descr": [],
+      "if": "em1",
+      "enable": [],
+      "ipaddr": "10.77.10.1",
+      "subnet": "24",
+      "track6-interface": "wan",
+      "track6-prefix-id": "0",
+      "media": [],
+      "mediaopt": [],
+      "gateway": [],
+      "ipaddrv6": [],
+      "subnetv6": [],
+      "gatewayv6": []
+    },
+    "opt1": {
+      "descr": [],
+      "if": "em2",
+      "enable": [],
+      "spoofmac": [],
+      "ipaddr": "10.77.30.1",
+      "subnet": "24"
+    },
+    "opt2": {
+      "descr": [],
+      "if": "em3",
+      "enable": [],
+      "ipaddr": "10.77.70.1",
+      "subnet": "24",
+      "spoofmac": []
+    },
+    "opt3": {
+      "if": "em4",
+      "descr": [],
+      "enable": [],
+      "ipaddr": "10.77.40.1",
+      "subnet": "24"
+    },
+    "opt4": {
+      "if": "em5",
+      "descr": [],
+      "enable": [],
+      "ipaddr": "10.77.20.1",
+      "subnet": "24"
+    },
+    "opt5": {
+      "if": "em6",
+      "descr": [],
+      "enable": [],
+      "ipaddr": "10.77.50.1",
+      "subnet": "24"
+    }
+  },
+  "filter": {
+    "rule": [
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "40000-40049"
+        },
+        "tracker": "1791847668",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "22"
+        },
+        "tracker": "1791847546",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "22"
+        },
+        "tracker": "1791847549",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "80"
+        },
+        "tracker": "1791847568",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "21"
+        },
+        "tracker": "1791847569",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "80"
+        },
+        "tracker": "1791847570",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "443"
+        },
+        "tracker": "1791847571",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "3389"
+        },
+        "tracker": "1791847572",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "25"
+        },
+        "tracker": "1791847573",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "143"
+        },
+        "tracker": "1791847574",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "443"
+        },
+        "tracker": "1791847575",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "587"
+        },
+        "tracker": "1791847576",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "993"
+        },
+        "tracker": "1791847577",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "3389"
+        },
+        "tracker": "1791847578",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3389"
+        },
+        "tracker": "1791847579",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "tracker": "1791847580",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.20.10",
+          "port": "8080"
+        },
+        "tracker": "1791847581",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173659",
+        "statetype": [],
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "22"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927499",
+        "statetype": [],
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.20.10",
+          "port": "22"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788901422",
+        "statetype": [],
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "22"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788883733",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.10.1",
+          "port": "22"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788883734",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.10.1",
+          "port": "443"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "statetype": [],
+        "tracker": "1788881912",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "22"
+        },
+        "descr": [],
+        "created": {
+          "time": "1788881912",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "statetype": [],
+        "tracker": "1788881913",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "22"
+        },
+        "descr": [],
+        "created": {
+          "time": "1788881912",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "lan",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "statetype": [],
+        "tracker": "1788881914",
+        "source": {
+          "address": "10.77.10.50"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "443"
+        },
+        "descr": [],
+        "created": {
+          "time": "1788881912",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1792371854",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "any": []
+        },
+        "destination": {
+          "address": "10.77.70.20"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792371854",
+          "username": []
+        },
+        "created": {
+          "time": "1792371854",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847545",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "53"
+        },
+        "tracker": "1791847547",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847548",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "53"
+        },
+        "tracker": "1791847550",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "123"
+        },
+        "tracker": "1791847551",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847552",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "tracker": "1791847553",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "tracker": "1791847554",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791758417",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791758415",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791756698",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791756694",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791742197",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791740454",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8770"
+        },
+        "tracker": "1791478030",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791065999",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791066001",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791066003",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791066005",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791066007",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791066009",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064865",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064866",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "135"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064867",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "636"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064868",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3269"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064869",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "49152-65535"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064870",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064871",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064872",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064873",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "135"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064874",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "445"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064875",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "636"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064876",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3268"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064877",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3269"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064878",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "49152-65535"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064879",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064880",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064881",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064882",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064883",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "135"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064884",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064885",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "445"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064886",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064887",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "636"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064888",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3268"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064889",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3269"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064890",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "49152-65535"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064891",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064892",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064893",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064894",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064895",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064896",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173661",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "3306"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "tracker": "1788883090",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788883091",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1789254152",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": [],
+        "created": {
+          "time": "1789254152",
+          "username": []
+        },
+        "updated": {
+          "time": "1789254685",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254213",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254213",
+          "username": []
+        },
+        "created": {
+          "time": "1789254213",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254263",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "445"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254263",
+          "username": []
+        },
+        "created": {
+          "time": "1789254263",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254322",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254322",
+          "username": []
+        },
+        "created": {
+          "time": "1789254322",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254381",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3268"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254381",
+          "username": []
+        },
+        "created": {
+          "time": "1789254381",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254423",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254423",
+          "username": []
+        },
+        "created": {
+          "time": "1789254423",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254473",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254473",
+          "username": []
+        },
+        "created": {
+          "time": "1789254473",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254676",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254676",
+          "username": []
+        },
+        "created": {
+          "time": "1789254676",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789254716",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789254716",
+          "username": []
+        },
+        "created": {
+          "time": "1789254716",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173662",
+        "statetype": [],
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "3306"
+        },
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1789310649",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789310649",
+          "username": []
+        },
+        "created": {
+          "time": "1789310649",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789311724",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789311724",
+          "username": []
+        },
+        "created": {
+          "time": "1789311724",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789311860",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789311860",
+          "username": []
+        },
+        "created": {
+          "time": "1789311860",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789311927",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789311927",
+          "username": []
+        },
+        "created": {
+          "time": "1789311927",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789312055",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789312055",
+          "username": []
+        },
+        "created": {
+          "time": "1789312055",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789312085",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789312085",
+          "username": []
+        },
+        "created": {
+          "time": "1789312085",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789312173",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789312173",
+          "username": []
+        },
+        "created": {
+          "time": "1789312173",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789312207",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789312207",
+          "username": []
+        },
+        "created": {
+          "time": "1789312207",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789329902",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "udp",
+        "source": {
+          "address": "10.77.30.20"
+        },
+        "destination": {
+          "address": "10.77.30.1",
+          "port": "123"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789329902",
+          "username": []
+        },
+        "created": {
+          "time": "1789329902",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1789329980",
+        "type": "pass",
+        "interface": "opt1",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.30.30"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1789329980",
+          "username": []
+        },
+        "created": {
+          "time": "1789329980",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1791847666",
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.20"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792125954",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847558",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "143"
+        },
+        "tracker": "1791758221",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "587"
+        },
+        "tracker": "1791247440",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.20.10",
+          "port": "8080"
+        },
+        "tracker": "1791245630",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064906",
+        "statetype": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064907",
+        "statetype": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "tracker": "1790915594",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "22"
+        },
+        "tracker": "1790915595",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.20.10",
+          "port": "22"
+        },
+        "tracker": "1790915596",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "22"
+        },
+        "tracker": "1790915597",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "22"
+        },
+        "tracker": "1790915598",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "80"
+        },
+        "tracker": "1790915599",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "443"
+        },
+        "tracker": "1790915600",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "21"
+        },
+        "tracker": "1790915601",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "22"
+        },
+        "tracker": "1790915602",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "25"
+        },
+        "tracker": "1790915603",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "993"
+        },
+        "tracker": "1790915604",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "443"
+        },
+        "tracker": "1790915605",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "22"
+        },
+        "tracker": "1790915606",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173663",
+        "statetype": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "3306"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "tracker": "1788883092",
+        "statetype": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.70.1",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788883093",
+        "statetype": [],
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.70.1",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1788881442",
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.70.10"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "443"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1788881442",
+          "username": []
+        },
+        "created": {
+          "time": "1788881442",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1792125942",
+        "type": "pass",
+        "interface": "opt2",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "source": {
+          "address": "10.77.70.20"
+        },
+        "destination": {
+          "any": []
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792125942",
+          "username": []
+        },
+        "created": {
+          "time": "1792125942",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1792371868",
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "any": []
+        },
+        "destination": {
+          "address": "10.77.70.20"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792371868",
+          "username": []
+        },
+        "created": {
+          "time": "1792371868",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1791847555",
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "icmp",
+        "icmptype": "any",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "any": []
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792441743",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791748588",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791748586",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791066011",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791066013",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1791064904",
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "any": [],
+          "port": "80"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792441712",
+          "username": []
+        }
+      },
+      {
+        "id": [],
+        "tracker": "1791064905",
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "any": [],
+          "port": "443"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792441721",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788901424",
+        "statetype": [],
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.40.1",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt3",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "tracker": "1788901423",
+        "statetype": [],
+        "source": {
+          "address": "10.77.40.10"
+        },
+        "destination": {
+          "address": "10.77.40.1",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1792371880",
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "any": []
+        },
+        "destination": {
+          "address": "10.77.70.20"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792371880",
+          "username": []
+        },
+        "created": {
+          "time": "1792371880",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "40000-40049"
+        },
+        "tracker": "1791847667",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.20.1",
+          "port": "53"
+        },
+        "tracker": "1791847543",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847544",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "80"
+        },
+        "tracker": "1791847559",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "21"
+        },
+        "tracker": "1791847560",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "80"
+        },
+        "tracker": "1791847561",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.20",
+          "port": "443"
+        },
+        "tracker": "1791847562",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "25"
+        },
+        "tracker": "1791847563",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "143"
+        },
+        "tracker": "1791847564",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "443"
+        },
+        "tracker": "1791847565",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "587"
+        },
+        "tracker": "1791847566",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.30",
+          "port": "993"
+        },
+        "tracker": "1791847567",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791760412",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791760409",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8770"
+        },
+        "tracker": "1791250147",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791065995",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791065997",
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064863",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064864",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173664",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "3306"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173665",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.50.20",
+          "port": "22"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927516",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927515",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927514",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927513",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927512",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927511",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "49152-65535"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927510",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3269"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927509",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3268"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927508",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "636"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927507",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927506",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "445"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927505",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927504",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "135"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927503",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927502",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1788927501",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.30.10",
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt4",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1788927500",
+        "statetype": [],
+        "source": {
+          "address": "10.77.20.10"
+        },
+        "destination": {
+          "address": "10.77.20.1",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "id": [],
+        "tracker": "1792372437",
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "tag": [],
+        "tagged": [],
+        "max": [],
+        "max-src-nodes": [],
+        "max-src-conn": [],
+        "max-src-states": [],
+        "statetimeout": [],
+        "statepolicy": [],
+        "statetype": [],
+        "os": [],
+        "protocol": "tcp",
+        "source": {
+          "any": []
+        },
+        "destination": {
+          "address": "10.77.70.20"
+        },
+        "descr": [],
+        "updated": {
+          "time": "1792372437",
+          "username": []
+        },
+        "created": {
+          "time": "1792372437",
+          "username": []
+        }
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp/udp",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.50.1",
+          "port": "53"
+        },
+        "tracker": "1791847556",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "icmp",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.0.0/16"
+        },
+        "tracker": "1791847557",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8772"
+        },
+        "tracker": "1791746362",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8771"
+        },
+        "tracker": "1791746359",
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791066015",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.70.10",
+          "port": "8080"
+        },
+        "statetype": [],
+        "descr": []
+      },
+      {
+        "type": "block",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "any",
+        "tracker": "1791066017",
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.70.0/24"
+        },
+        "log": [],
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064897",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "135"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064898",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "636"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064899",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3269"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064900",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "49152-65535"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1791064901",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064902",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "80"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1791064903",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "CCDC_NONINTERNET_V4",
+          "not": [],
+          "port": "443"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1789173660",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.50.1",
+          "port": "123"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173666",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173667",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173668",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173669",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "445"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173670",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "tcp",
+        "tracker": "1789173671",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "3268"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1789173672",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "53"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1789173673",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "88"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1789173674",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "389"
+        },
+        "descr": []
+      },
+      {
+        "type": "pass",
+        "interface": "opt5",
+        "ipprotocol": "inet",
+        "protocol": "udp",
+        "tracker": "1789173675",
+        "statetype": [],
+        "source": {
+          "address": "10.77.50.20"
+        },
+        "destination": {
+          "address": "10.77.40.10",
+          "port": "464"
+        },
+        "descr": []
+      }
+    ],
+    "separator": {
+      "opt1": [],
+      "opt3": [],
+      "opt4": [],
+      "opt5": []
+    }
+  },
+  "nat": {
+    "outbound": {
+      "mode": "automatic"
+    }
+  },
+  "aliases": {
+    "alias": {
+      "name": "CCDC_NONINTERNET_V4",
+      "type": "network",
+      "address": "0.0.0.0/8 10.0.0.0/8 100.64.0.0/10 127.0.0.0/8 169.254.0.0/16 172.16.0.0/12 192.168.0.0/16 224.0.0.0/4 240.0.0.0/4",
+      "descr": []
+    }
+  },
+  "staticroutes": [],
+  "dhcpd": {
+    "lan": {
+      "range": {
+        "from": "10.77.10.10",
+        "to": "10.77.10.245"
+      }
+    }
+  },
+  "unbound": {
+    "enable": [],
+    "dnssec": [],
+    "active_interface": [],
+    "outgoing_interface": [],
+    "custom_options": [],
+    "hideidentity": [],
+    "hideversion": [],
+    "dnssecstripped": [],
+    "qname-minimisation": [],
+    "hosts": [
+      {
+        "host": "range-fw",
+        "domain": "infra.test",
+        "ip": "10.77.10.1",
+        "descr": []
+      },
+      {
+        "host": "score01",
+        "domain": "infra.test",
+        "ip": "10.77.70.10",
+        "descr": []
+      }
+    ]
+  }
+}

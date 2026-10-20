@@ -1,0 +1,15 @@
+[Unit]
+Description=Summit Supply Aeacus practice scoring
+After=network.target apache2.service ssh.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/aeacus
+ExecStart=/opt/aeacus/phocus
+Restart=on-failure
+RestartSec=10
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Passive contestant service-repair observer
+[Timer]
+OnBootSec=2s
+OnUnitActiveSec=2s
+AccuracySec=250ms
+Unit=summit-caldera-business-recovery.service
+[Install]
+WantedBy=timers.target

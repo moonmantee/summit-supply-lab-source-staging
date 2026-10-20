@@ -1,0 +1,11 @@
+[
+  {
+    "id": "forum-web-stop",
+    "guest": "forum01",
+    "action": "business_stop",
+    "target": "web",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

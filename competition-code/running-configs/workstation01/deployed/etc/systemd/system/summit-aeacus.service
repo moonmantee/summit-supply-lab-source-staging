@@ -1,0 +1,15 @@
+[Unit]
+Description=Summit Supply AlmaLinux practice scoring
+After=network.target sshd.service firewalld.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/aeacus
+ExecStart=/opt/aeacus/phocus
+Restart=on-failure
+RestartSec=10
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

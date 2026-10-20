@@ -1,0 +1,11 @@
+[Unit]
+Description=Summit read-only image acceptance check
+ConditionPathExists=!/var/backups/summit-workstation01-finish-retry4/boot-verified.json
+Wants=network-online.target
+After=network-online.target summit-aeacus.service sssd.service firewalld.service
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/aeacus/finish_runtime.py --verify-only
+[Install]
+WantedBy=multi-user.target

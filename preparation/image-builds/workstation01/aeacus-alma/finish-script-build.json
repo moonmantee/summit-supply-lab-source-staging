@@ -1,0 +1,32 @@
+{
+  "script": "finish-workstation01.sh",
+  "payload_sha256": "8a04c90c2d39c8787e4a07416e499c4aa4af3f87a72d736ad7742c6192f019e8",
+  "script_sha256": "bd392ee7de1b4357babac33bcd3df375f0943314838a681776bac255916dbc6c",
+  "bundled_files": [
+    "finish_workstation.py",
+    "finish_helpers.py",
+    "auth_policy.py",
+    "application_stage.py",
+    "test_finish_helpers.py",
+    "test_auth_policy.py",
+    "test_application_stage.py",
+    "pam_runner.py",
+    "probe-validation-scoring.conf",
+    "competition-ReadMe.conf",
+    "competition-manifest.json",
+    "artifact-hashes.json",
+    "probes/access.py",
+    "probes/core.py",
+    "probes/policy.py",
+    "probes/scenario.py",
+    "probes/test_access.py",
+    "probes/test_core.py",
+    "probes/test_policy.py",
+    "probes/test_scenario.py",
+    "probes/test_trust.py",
+    "probes/trust.py"
+  ],
+  "checks": 40,
+  "points": 100,
+  "guest_execution_verified": false
+}

@@ -1,0 +1,27 @@
+{
+  "issues": 28,
+  "machine": "MAIL01",
+  "securityControls": 25,
+  "restored": 0,
+  "forensicQuestions": 3,
+  "solution": 100,
+  "configHash": "283C76FED69F906621A51C76CAB5303A82BA854D79B73AB0866099F95904CEAA",
+  "reportUtc": "2026-10-05T00:30:02.0492939Z",
+  "phase": "runtime-verified",
+  "points": 100,
+  "forensicProbeHash": "A15B26334C20F828AF2DEC581814C8427DDF24A67C95F87732A9CFB5900F6DAC",
+  "manualGui": "pending",
+  "preservation": {
+    "services": "running",
+    "mailConfigHashes": "unchanged",
+    "domainTrust": true,
+    "webmailPinnedLeafStatus": 200,
+    "nativeWindowsCertificateTrust": "baseline failed",
+    "realMailTransactions": "pending",
+    "existingAdminMembership": "preserved"
+  },
+  "starting": 0,
+  "manualAcceptance": "pending",
+  "export": "not-performed",
+  "freshEncryptedReport": true
+}

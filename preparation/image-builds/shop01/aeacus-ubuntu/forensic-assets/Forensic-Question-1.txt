@@ -1,0 +1,13 @@
+Shop01 - Forensic Question 1 (2 points)
+
+The files in /opt/summit-evidence/shop01 are preserved SYNTHETIC incident
+evidence. They contain no real customer data or credentials.
+
+An unexpected client retrieved an internal backup from the training area.
+Using apache-access.log and incident-summary.txt, identify that client's
+source IPv4 address. Submit just the address.
+
+Write your answer after the equals sign below, then save this file.
+Keep exactly one Answer = line. Each question is scored independently.
+
+Answer =

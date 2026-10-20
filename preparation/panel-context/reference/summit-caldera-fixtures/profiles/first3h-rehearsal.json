@@ -1,0 +1,37 @@
+[
+  {
+    "id": "first3-notice",
+    "guest": "shop01",
+    "action": "notice",
+    "target": "desktop",
+    "at": 2,
+    "window": 15
+  },
+  {
+    "id": "business_stop",
+    "guest": "shop01",
+    "action": "business_stop",
+    "target": "apache",
+    "at": 20,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "business_restart_off",
+    "guest": "shop01",
+    "action": "business_restart_off",
+    "target": "apache",
+    "at": 250,
+    "window": 15,
+    "duration": 180
+  },
+  {
+    "id": "business_disable",
+    "guest": "shop01",
+    "action": "business_disable",
+    "target": "apache",
+    "at": 480,
+    "window": 15,
+    "duration": 180
+  }
+]

@@ -1,0 +1,16 @@
+{
+    "machine":  "FORUM01",
+    "score":  0,
+    "possible":  100,
+    "issues":  20,
+    "allPlantedChecks":  "FAIL",
+    "probeErrors":  0,
+    "service":  "Running",
+    "startup":  "Automatic",
+    "runtimePlaintextAbsent":  true,
+    "publicAnswersBlank":  true,
+    "forumHttpStatus":  200,
+    "requiredServices":  "running",
+    "reportUtc":  "2026-10-04T22:15:05.0555541Z",
+    "utc":  "2026-10-04T22:15:50.5208365Z"
+}

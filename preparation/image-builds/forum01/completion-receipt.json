@@ -1,0 +1,25 @@
+{
+    "phase":  "runtime-verified",
+    "machine":  "FORUM01",
+    "issues":  20,
+    "points":  100,
+    "startingScore":  0,
+    "solutionScore":  100,
+    "restoredScore":  0,
+    "encryptedReportFresh":  true,
+    "serviceStatus":  "Running",
+    "serviceStartup":  "Automatic",
+    "probeHash":  "950AE8CE62D64C63EAB0BC5BD59413D4F91725E53236AFF12C5AEF8D3F5EE8ED",
+    "configHash":  "C28818C0159A2393DE42BAA5616E07C6402A3DD83219BA062055C00F5794233A",
+    "reportUtc":  "2026-10-04T22:14:11.3758024Z",
+    "manualAcceptance":  "pending",
+    "export":  "not-requested",
+    "preservation":  {
+                         "forumStatus":  200,
+                         "requiredServices":  "running",
+                         "businessHashes":  "unchanged",
+                         "fallbackAuthentication":  true,
+                         "standardAuthentication":  true
+                     },
+    "defenderException":  "C:\\aeacus\\phocus.exe only; pinned Aeacus 2.1.1 SHA-256 verified; antivirus and real-time protection active"
+}

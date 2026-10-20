@@ -1,0 +1,1 @@
+[{"id": "manual-sql-stop", "guest": "sql01", "action": "business_stop", "target": "mariadb", "at": 2, "window": 15, "duration": 15}]

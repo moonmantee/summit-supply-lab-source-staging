@@ -1,0 +1,191 @@
+{
+    "Count":  20,
+    "Length":  20,
+    "LongLength":  20,
+    "Rank":  1,
+    "SyncRoot":  [
+                     {
+                         "Account":  "maya.chen",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1603"
+                     },
+                     {
+                         "Account":  "emma.wilson",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1604"
+                     },
+                     {
+                         "Account":  "liam.brooks",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1605"
+                     },
+                     {
+                         "Account":  "jordan.lee",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1606"
+                     },
+                     {
+                         "Account":  "ava.thompson",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1607"
+                     },
+                     {
+                         "Account":  "noah.garcia",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1608"
+                     },
+                     {
+                         "Account":  "sam.patel",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1609"
+                     },
+                     {
+                         "Account":  "olivia.martinez",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1610"
+                     },
+                     {
+                         "Account":  "ethan.clark",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1611"
+                     },
+                     {
+                         "Account":  "isabella.nguyen",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1612"
+                     },
+                     {
+                         "Account":  "lucas.reed",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1613"
+                     },
+                     {
+                         "Account":  "mia.robinson",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1614"
+                     },
+                     {
+                         "Account":  "benjamin.scott",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1615"
+                     },
+                     {
+                         "Account":  "charlotte.adams",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1616"
+                     },
+                     {
+                         "Account":  "alex.morgan",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1617"
+                     },
+                     {
+                         "Account":  "taylor.ross",
+                         "Role":  "standard",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1618"
+                     },
+                     {
+                         "Account":  "alex.admin",
+                         "Role":  "admin",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1619"
+                     },
+                     {
+                         "Account":  "taylor.admin",
+                         "Role":  "admin",
+                         "Enabled":  true,
+                         "FreshAuthentication":  true,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1620"
+                     },
+                     {
+                         "Account":  "casey.turner",
+                         "Role":  "departed",
+                         "Enabled":  false,
+                         "FreshAuthentication":  false,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1621"
+                     },
+                     {
+                         "Account":  "drew.parker",
+                         "Role":  "departed",
+                         "Enabled":  false,
+                         "FreshAuthentication":  false,
+                         "PrivilegePass":  true,
+                         "Pass":  true,
+                         "SID":  "S-1-5-21-1538098495-642441483-3435665723-1622"
+                     }
+                 ],
+    "IsReadOnly":  false,
+    "IsFixedSize":  true,
+    "IsSynchronized":  false
+}

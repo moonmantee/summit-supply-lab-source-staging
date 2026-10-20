@@ -1,0 +1,11 @@
+[
+  {
+    "id": "hour4-pilot-forum01-ftp",
+    "guest": "forum01",
+    "target": "ftp",
+    "action": "business_launch_fault",
+    "at": 3,
+    "window": 15,
+    "duration": 15
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "guest": "workstation01",
+    "at": 0,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-0",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 300,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-1",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 600,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-2",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 900,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-3",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 1200,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-4",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 1500,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-5",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 1800,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-6",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 2100,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-7",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 2400,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-8",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 2700,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-9",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 3000,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-10",
+    "action": "notice"
+  },
+  {
+    "guest": "workstation01",
+    "at": 3300,
+    "target": "desktop",
+    "window": 15,
+    "id": "workstation-popup-11",
+    "action": "notice"
+  }
+]

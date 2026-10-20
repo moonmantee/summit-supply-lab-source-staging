@@ -1,0 +1,98 @@
+[
+  {
+    "id": "notice-0",
+    "at": 0,
+    "window": 8,
+    "guest": "shop01",
+    "action": "notice",
+    "target": "desktop"
+  },
+  {
+    "id": "notice-8",
+    "at": 8,
+    "window": 8,
+    "guest": "shop01",
+    "action": "notice",
+    "target": "wall"
+  },
+  {
+    "id": "demo-service_stop-24",
+    "at": 24,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "duration": 5
+  },
+  {
+    "id": "demo-service_disable-50",
+    "at": 50,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_disable",
+    "target": "demo",
+    "duration": 8
+  },
+  {
+    "id": "demo-service_config-80",
+    "at": 80,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_config",
+    "target": "demo",
+    "duration": 8
+  },
+  {
+    "id": "demo-service_stop-110",
+    "at": 110,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "duration": 5
+  },
+  {
+    "id": "demo-service_stop-140",
+    "at": 140,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "duration": 5
+  },
+  {
+    "id": "demo-service_stop-170",
+    "at": 170,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_stop",
+    "target": "demo",
+    "duration": 5
+  },
+  {
+    "id": "demo-service_executable-200",
+    "at": 200,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_executable",
+    "target": "demo",
+    "duration": 8
+  },
+  {
+    "id": "demo-service_definition-230",
+    "at": 230,
+    "window": 8,
+    "guest": "shop01",
+    "action": "service_definition",
+    "target": "demo",
+    "duration": 8
+  },
+  {
+    "id": "notice-260",
+    "at": 260,
+    "window": 8,
+    "guest": "shop01",
+    "action": "notice",
+    "target": "desktop"
+  }
+]

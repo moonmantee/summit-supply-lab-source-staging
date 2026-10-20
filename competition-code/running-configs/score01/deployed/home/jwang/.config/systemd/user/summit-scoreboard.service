@@ -1,0 +1,15 @@
+[Unit]
+Description=Local Summit scoreboard and competition controls
+
+[Service]
+Type=simple
+WorkingDirectory=/home/jwang/summit-scoring
+ExecStart=/usr/bin/python3 /home/jwang/summit-scoring/scoreboard_server.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077
+
+[Install]
+WantedBy=default.target

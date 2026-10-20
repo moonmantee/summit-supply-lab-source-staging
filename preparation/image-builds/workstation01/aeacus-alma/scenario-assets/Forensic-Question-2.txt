@@ -1,0 +1,10 @@
+Forensic Question 2 — Persistence components
+
+Review /opt/summit-evidence/scenario-events.txt and investigate the suspicious
+systemd persistence. Evidence remains available after removing the live tasks.
+
+Identify the timer unit, service unit, and absolute live payload path.
+Enter them in that order, separated by a semicolon and a space:
+timer-name; service-name; /absolute/live/payload/path
+
+Answer =
